@@ -1,11 +1,9 @@
 # Mobile Programming Practicals
 
 Hands on with Android Studio for native Android app development for BCA 6th Semester    
-Repo broken down into different branches in units for course related topics  
+Repo broken down into different branches in units for course related topics
 
 # Unit Coverage
-
-What each unit covers:
 
 - Unit 1: Introduction to MP
 - Unit 2: Basic Layout
