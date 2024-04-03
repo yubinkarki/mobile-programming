@@ -1,0 +1,54 @@
+#*.iml
+#.gradle
+#/local.properties
+#/.idea/caches
+#/.idea/libraries
+#/.idea/modules.xml
+#/.idea/workspace.xml
+#/.idea/navEditor.xml
+#/.idea/assetWizardSettings.xml
+#.DS_Store
+#/build
+#/captures
+#.externalNativeBuild
+#.cxx
+#local.properties
+
+# Android Studio specific files
+.idea/
+*.iml
+build/
+local.properties
+
+# Gradle specific files
+*.gradle
+gradle/wrapper/gradle-wrapper.jar
+
+# Output files
+*.apk
+*.ap_
+*.class
+*.dex
+*.aar
+*.res
+
+# Temporary files
+captures/
+*.log
+*.obj
+*.out
+*.pro
+*.tmp
+
+# Test coverage reports
+coverage/
+
+# IDE generated assets
+assets/
+
+# Profiling results
+*.hprof
+
+# External build tools
+.externalNativeBuild/
+CXX/
