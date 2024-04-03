@@ -1,24 +1,5 @@
-#*.iml
-#.gradle
-#/local.properties
-#/.idea/caches
-#/.idea/libraries
-#/.idea/modules.xml
-#/.idea/workspace.xml
-#/.idea/navEditor.xml
-#/.idea/assetWizardSettings.xml
-#.DS_Store
-#/build
-#/captures
-#.externalNativeBuild
-#.cxx
-#local.properties
-
 # Android Studio specific files
 .idea/
-*.iml
-build/
-local.properties
 
 # Gradle specific files
 *.gradle
@@ -52,3 +33,7 @@ assets/
 # External build tools
 .externalNativeBuild/
 CXX/
+
+# Additional files
+.DS_Store
+local.properties
