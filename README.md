@@ -20,8 +20,8 @@ What each unit covers:
 ### Prerequisites
 
 ```
-- JDK
-- Gradle
-- Android SDK
-- Android Studio
+- JDK (17)
+- Gradle (8.4)
+- Android SDK (34)
+- Android Studio (2023.2.1 Iguana)
 ```
