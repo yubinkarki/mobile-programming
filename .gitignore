@@ -1,9 +1,12 @@
 # Android Studio specific files
 .idea/
+*.jks
+*.keystore
 
 # Gradle specific files
 *.gradle
 gradle/wrapper/gradle-wrapper.jar
+/build/
 
 # Output files
 *.apk
@@ -37,3 +40,4 @@ CXX/
 # Additional files
 .DS_Store
 local.properties
+.gradle/

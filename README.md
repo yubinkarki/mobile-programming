@@ -1,8 +1,7 @@
 # Mobile Programming Practicals
 
-Hands on with Android Studio for native Android app development for BCA 6th Semester  
-Repo broken down into different branches in units for course related topics  
-Main branch is a bare project
+Hands on with Android Studio for native Android app development for BCA 6th Semester.  
+Each unit is separated in their respective directory.  
 
 # Units
 
@@ -17,16 +16,16 @@ Main branch is a bare project
 # Development Setup
 
 ```
-- Android Studio
-- Android SDK
-- Gradle
 - JDK
+- Gradle
+- Android SDK
+- Android Studio
 ```
 
 # Unit 1 - Introduction to Mobile Programming
 
-The process of developing Mobile application using native or cross-platform tools  
-Market dominated by two major operating systems  
+The process of developing Mobile application using native or cross-platform tools
+Market dominated by two major operating systems
 Various languages and frameworks available for development
 
 ### Unit Coverage
@@ -73,8 +72,8 @@ Software Development Lifecycle (SDLC)
 
 # Unit 2 - Introduction to Android Programming
 
-The process of developing Android application using native tools  
-Android is a Linux based mobile OS maintained by Google (OHA)  
+The process of developing Android application using native tools
+Android is a Linux based mobile OS maintained by Google (OHA)
 Android Open Source Project (AOSP) is the root of all android based systems
 
 ### Unit Coverage
@@ -106,7 +105,7 @@ The first Android mobile phone was launched in 2008 (HTC Dream)
 # Unit 3 - Designing the UI
 
 The user interface is the point at which human users interact with a computer, website or
-application  
+application
 The goal of effective UI is to make the user's experience easy and intuitive
 
 ### Unit Coverage
@@ -130,7 +129,7 @@ AbsoluteLayout
 
 # Unit 4 - Android Activity
 
-Every instance of an Activity has a lifecycle  
+Every instance of an Activity has a lifecycle
 An activity transitions between three possible states: running, paused and stopped
 
 ### Unit Coverage
@@ -145,7 +144,7 @@ Getting and setting data to/from layout files
 
 # Unit 5 - UI Fragments, Menus and Dialogs
 
-Fragment is a part of an activity, also known as a sub-activity  
+Fragment is a part of an activity, also known as a sub-activity
 It represents multiple screens inside one main activity
 
 ### Unit Coverage
@@ -160,7 +159,7 @@ Alert Dialog
 
 # Unit 6 - ListView, GridView and RecyclerView
 
-Fragment is a part of an activity, also known as a sub-activity  
+Fragment is a part of an activity, also known as a sub-activity
 It represents multiple screens inside one main activity
 
 ### Unit Coverage
@@ -173,7 +172,7 @@ RecyclerView (Features and Practical)
 
 # Unit 7 - Advanced Android Concepts
 
-SQLite is an open-source relational database  
+SQLite is an open-source relational database
 It supports all database features despite it's size
 
 ### Unit Coverage
