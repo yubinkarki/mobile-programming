@@ -1,30 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/teal_200"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".unit_2.Hello">
 
     <TextView
+        android:id="@+id/headingText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
-        android:text="Hello World"
+        android:text="@string/hello_world"
         android:textAlignment="center"
         android:textColor="@color/purple_700"
         android:textSize="30sp" />
 
     <EditText
+        android:id="@+id/fullNameInput"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="20dp"
         android:layout_marginTop="20dp"
         android:autofillHints="name"
         android:background="@color/white"
-        android:hint="Enter your full name"
+        android:hint="@string/full_name_hint"
         android:inputType="text"
         android:paddingHorizontal="20dp"
         android:paddingVertical="10dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/gray"
         android:textSize="25sp" />
 
     <LinearLayout
@@ -38,7 +44,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/gray"
-            android:text="Cancel"
+            android:text="@string/cancel"
             android:textColor="@color/white" />
 
         <View
@@ -46,10 +52,11 @@
             android:layout_height="match_parent" />
 
         <Button
+            android:id="@+id/submitButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/purple_700"
-            android:text="Submit"
+            android:text="@string/submit"
             android:textColor="@color/white" />
     </LinearLayout>
 </LinearLayout>

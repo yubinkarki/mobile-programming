@@ -1,3 +1,7 @@
 <resources>
-    <string name="app_name">mobile_programming</string>
+    <string name="app_name">MP 2024</string>
+    <string name="hello_world">Hello World</string>
+    <string name="full_name_hint">Enter your full name</string>
+    <string name="cancel">Cancel</string>
+    <string name="submit">Submit</string>
 </resources>
