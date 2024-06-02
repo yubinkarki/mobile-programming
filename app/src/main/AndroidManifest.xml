@@ -14,7 +14,7 @@
         android:theme="@style/Theme.Mobile_programming"
         tools:targetApi="34">
         <activity
-            android:name=".unit_2.Unit_2"
+            android:name=".unit_2.Hello"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
