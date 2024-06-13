@@ -3,7 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/teal_200"
+    android:weightSum="5"
+    android:background="@color/light_teal"
     android:orientation="vertical"
     tools:context=".unit_2.Hello">
 
@@ -14,7 +15,7 @@
         android:layout_marginTop="50dp"
         android:text="@string/hello_world"
         android:textAlignment="center"
-        android:textColor="@color/purple_700"
+        android:textColor="@color/dark_purple"
         android:textSize="30sp" />
 
     <EditText
@@ -55,7 +56,7 @@
             android:id="@+id/submitButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/purple_700"
+            android:backgroundTint="@color/dark_purple"
             android:text="@string/submit"
             android:textColor="@color/white" />
     </LinearLayout>
