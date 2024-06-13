@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rootScrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_teal"
+    android:paddingHorizontal="25dp"
+    android:scrollbarStyle="outsideOverlay"
+    android:scrollbarThumbVertical="@color/transparent_dark_teal">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/rootConstraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="60dp">
+
+        <TextView
+            android:id="@+id/headingText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/hello_world"
+            android:textAlignment="center"
+            android:textColor="@color/hard_pink"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/fullNameInput"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:autofillHints="name"
+            android:background="@drawable/rounded_corner"
+            android:hint="@string/full_name_hint"
+            android:inputType="text"
+            android:paddingHorizontal="15dp"
+            android:paddingVertical="10dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/gray"
+            android:textCursorDrawable="@drawable/input_cursor"
+            android:textSize="25sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/headingText"
+            app:layout_constraintWidth_percent="0.9" />
+
+        <LinearLayout
+            android:id="@+id/buttonContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fullNameInput">
+
+            <Button
+                android:id="@+id/submitButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/dark_teal"
+                android:text="@string/submit"
+                android:textColor="@color/white" />
+
+            <Space
+                android:layout_width="10dp"
+                android:layout_height="match_parent" />
+
+            <Button
+                android:id="@+id/cancelButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/gray"
+                android:text="@string/cancel"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/sportsLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="@string/sports_question"
+            android:textAlignment="textStart"
+            android:textColor="@color/gray"
+            android:textSize="20sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/buttonContainer" />
+
+        <LinearLayout
+            android:id="@+id/checkboxContainerTop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@id/sportsLabel">
+
+            <CheckBox
+                android:id="@+id/checkboxFootball"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:buttonTint="@color/hard_pink"
+                android:text="@string/football"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <CheckBox
+                android:id="@+id/checkboxBasketball"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:buttonTint="@color/hard_pink"
+                android:checked="true"
+                android:text="@string/basketball"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/checkboxContainerBottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@id/checkboxContainerTop">
+
+            <CheckBox
+                android:id="@+id/checkboxVolleyball"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:buttonTint="@color/hard_pink"
+                android:text="@string/volleyball"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <CheckBox
+                android:id="@+id/checkboxBadminton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:buttonTint="@color/hard_pink"
+                android:text="@string/badminton"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/genderLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="@string/select_gender"
+            android:textAlignment="textStart"
+            android:textColor="@color/gray"
+            android:textSize="20sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/checkboxContainerBottom" />
+
+        <RadioGroup
+            android:id="@+id/genderGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/genderLabel">
+
+            <RadioButton
+                android:id="@+id/genderMale"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@color/hard_pink"
+                android:text="@string/male"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <RadioButton
+                android:id="@+id/genderFemale"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@color/hard_pink"
+                android:text="@string/female"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/countryLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="@string/choose_country"
+            android:textAlignment="textStart"
+            android:textColor="@color/gray"
+            android:textSize="20sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/genderGroup" />
+
+        <Spinner
+            android:id="@+id/countrySpinner"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="5dp"
+            android:backgroundTint="@color/dark_teal"
+            android:entries="@array/country_list"
+            android:hapticFeedbackEnabled="true"
+            android:spinnerMode="dialog"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/countryLabel"
+            app:layout_constraintWidth_percent="0.5" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="150dp"
+            android:layout_marginTop="30dp"
+            android:contentDescription="@string/headphone_image"
+            android:scaleType="fitCenter"
+            android:src="@drawable/headphone"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/countrySpinner" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
