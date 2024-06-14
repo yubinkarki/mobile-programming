@@ -3,9 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:weightSum="5"
     android:background="@color/light_teal"
     android:orientation="vertical"
+    android:weightSum="5"
     tools:context=".unit_2.Hello">
 
     <TextView
@@ -42,6 +42,7 @@
         android:orientation="horizontal">
 
         <Button
+            android:id="@+id/cancelButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/gray"
