@@ -23,5 +23,10 @@
         </activity>
 
         <activity android:name=".unit_4.About" />
+
+        <activity
+            android:name=".unit_4.Contact"
+            android:excludeFromRecents="true"
+            android:theme="@style/myDialog" />
     </application>
 </manifest>
