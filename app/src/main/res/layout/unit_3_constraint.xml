@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/rootScrollView"
+    android:id="@+id/constraintRoot"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/light_teal"
@@ -10,25 +10,26 @@
     android:scrollbarThumbVertical="@color/transparent_dark_teal">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/rootConstraintLayout"
+        android:id="@+id/constraintRootLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingVertical="60dp">
 
         <TextView
-            android:id="@+id/headingText"
+            android:id="@+id/constraintHeadingText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/hello_world"
+            android:fontFamily="sans-serif-medium"
+            android:text="@string/kyc_form"
             android:textAlignment="center"
-            android:textColor="@color/hard_pink"
+            android:textColor="@color/black"
             android:textSize="40sp"
             android:textStyle="bold"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
-            android:id="@+id/fullNameInput"
+            android:id="@+id/constraintFullNameInput"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
@@ -44,26 +45,26 @@
             android:textSize="25sp"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/headingText"
+            app:layout_constraintTop_toBottomOf="@id/constraintHeadingText"
             app:layout_constraintWidth_percent="0.9" />
 
         <LinearLayout
-            android:id="@+id/buttonContainer"
+            android:id="@+id/constraintButtonContainer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="30dp"
             android:gravity="center"
             android:orientation="horizontal"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/fullNameInput">
+            app:layout_constraintTop_toBottomOf="@id/constraintFullNameInput">
 
             <Button
-                android:id="@+id/submitButton"
+                android:id="@+id/constraintAboutButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/dark_teal"
-                android:text="@string/submit"
+                android:text="@string/about"
                 android:textColor="@color/white" />
 
             <Space
@@ -71,16 +72,60 @@
                 android:layout_height="match_parent" />
 
             <Button
-                android:id="@+id/cancelButton"
+                android:id="@+id/constraintResetButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/gray"
-                android:text="@string/cancel"
+                android:text="@string/reset"
+                android:textColor="@color/white" />
+
+            <Space
+                android:layout_width="10dp"
+                android:layout_height="match_parent" />
+
+            <Button
+                android:id="@+id/constraintDialogButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/darker_purple"
+                android:text="@string/dialog"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/constraintLowerButtonContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/constraintButtonContainer">
+
+            <Button
+                android:id="@+id/constraintActivityButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/blue"
+                android:text="@string/activity"
+                android:textColor="@color/white" />
+
+            <Space
+                android:layout_width="10dp"
+                android:layout_height="match_parent" />
+
+            <Button
+                android:id="@+id/constraintResultButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/reddish"
+                android:text="@string/result"
                 android:textColor="@color/white" />
         </LinearLayout>
 
         <TextView
-            android:id="@+id/sportsLabel"
+            android:id="@+id/constraintSportsLabel"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
@@ -89,18 +134,18 @@
             android:textColor="@color/gray"
             android:textSize="20sp"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/buttonContainer" />
+            app:layout_constraintTop_toBottomOf="@id/constraintLowerButtonContainer" />
 
         <LinearLayout
-            android:id="@+id/checkboxContainerTop"
+            android:id="@+id/constraintCheckboxContainerTop"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="20dp"
             android:orientation="horizontal"
-            app:layout_constraintTop_toBottomOf="@id/sportsLabel">
+            app:layout_constraintTop_toBottomOf="@id/constraintSportsLabel">
 
             <CheckBox
-                android:id="@+id/checkboxFootball"
+                android:id="@+id/constraintCheckboxFootball"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -111,7 +156,7 @@
                 android:textSize="20sp" />
 
             <CheckBox
-                android:id="@+id/checkboxBasketball"
+                android:id="@+id/constraintCheckboxBasketball"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -124,15 +169,15 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/checkboxContainerBottom"
+            android:id="@+id/constraintCheckboxContainerBottom"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="20dp"
             android:orientation="horizontal"
-            app:layout_constraintTop_toBottomOf="@id/checkboxContainerTop">
+            app:layout_constraintTop_toBottomOf="@id/constraintCheckboxContainerTop">
 
             <CheckBox
-                android:id="@+id/checkboxVolleyball"
+                android:id="@+id/constraintCheckboxVolleyball"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -143,7 +188,7 @@
                 android:textSize="20sp" />
 
             <CheckBox
-                android:id="@+id/checkboxBadminton"
+                android:id="@+id/constraintCheckboxBadminton"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -155,7 +200,7 @@
         </LinearLayout>
 
         <TextView
-            android:id="@+id/genderLabel"
+            android:id="@+id/constraintGenderLabel"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
@@ -164,17 +209,17 @@
             android:textColor="@color/gray"
             android:textSize="20sp"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/checkboxContainerBottom" />
+            app:layout_constraintTop_toBottomOf="@id/constraintCheckboxContainerBottom" />
 
         <RadioGroup
-            android:id="@+id/genderGroup"
+            android:id="@+id/constraintGenderGroup"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="20dp"
             android:layout_marginTop="10dp"
             android:orientation="horizontal"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/genderLabel">
+            app:layout_constraintTop_toBottomOf="@id/constraintGenderLabel">
 
             <RadioButton
                 android:id="@+id/genderMale"
@@ -198,7 +243,7 @@
         </RadioGroup>
 
         <TextView
-            android:id="@+id/countryLabel"
+            android:id="@+id/constraintCountryLabel"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
@@ -207,21 +252,21 @@
             android:textColor="@color/gray"
             android:textSize="20sp"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/genderGroup" />
+            app:layout_constraintTop_toBottomOf="@id/constraintGenderGroup" />
 
         <Spinner
-            android:id="@+id/countrySpinner"
+            android:id="@+id/constraintCountrySpinner"
             android:layout_width="0dp"
-            android:layout_height="48dp"
+            android:layout_height="55dp"
             android:layout_marginTop="5dp"
             android:backgroundTint="@color/dark_teal"
             android:entries="@array/country_list"
             android:hapticFeedbackEnabled="true"
-            android:spinnerMode="dialog"
+            android:spinnerMode="dropdown"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/countryLabel"
-            app:layout_constraintWidth_percent="0.5" />
+            app:layout_constraintTop_toBottomOf="@id/constraintCountryLabel"
+            app:layout_constraintWidth_percent="0.6" />
 
         <ImageView
             android:layout_width="wrap_content"
@@ -231,6 +276,6 @@
             android:scaleType="fitCenter"
             android:src="@drawable/headphone"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/countrySpinner" />
+            app:layout_constraintTop_toBottomOf="@id/constraintCountrySpinner" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

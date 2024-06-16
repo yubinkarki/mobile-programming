@@ -1,7 +1,10 @@
 <TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/spinnerItemText"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:padding="12dp"
+    android:paddingHorizontal="20dp"
+    android:paddingVertical="15dp"
+    android:textAlignment="textStart"
     android:textColor="@color/dark_teal"
-    android:textSize="18sp"
+    android:textSize="20sp"
     android:textStyle="bold|italic" />

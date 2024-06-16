@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/helloRoot"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/light_teal"
@@ -9,24 +10,24 @@
     tools:context=".unit_2.Hello">
 
     <TextView
-        android:id="@+id/headingText"
+        android:id="@+id/helloHeadingText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
-        android:text="@string/hello_world"
+        android:text="@string/contact"
         android:textAlignment="center"
         android:textColor="@color/dark_purple"
         android:textSize="30sp" />
 
     <EditText
-        android:id="@+id/fullNameInput"
+        android:id="@+id/helloFullNameInput"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="20dp"
         android:layout_marginTop="20dp"
         android:autofillHints="name"
         android:background="@color/white"
-        android:hint="@string/full_name_hint"
+        android:hint="@string/name_hint"
         android:inputType="text"
         android:paddingHorizontal="20dp"
         android:paddingVertical="10dp"
@@ -38,11 +39,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
+        android:layout_marginBottom="50dp"
         android:gravity="center"
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/cancelButton"
+            android:id="@+id/helloCancelButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/gray"
@@ -54,7 +56,7 @@
             android:layout_height="match_parent" />
 
         <Button
-            android:id="@+id/submitButton"
+            android:id="@+id/helloSubmitButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/dark_purple"
