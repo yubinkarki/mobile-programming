@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/aboutRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_teal"
+    android:paddingHorizontal="25dp"
+    android:scrollbarStyle="outsideOverlay"
+    android:scrollbarThumbVertical="@color/transparent_dark_teal"
+    tools:context=".unit_4.About">
+
+    <LinearLayout
+        android:id="@+id/aboutRootLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingVertical="60dp">
+
+        <LinearLayout
+            android:id="@+id/aboutProfileContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/aboutProfileText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/profile"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="36sp"
+                android:textStyle="bold" />
+
+            <Space
+                android:layout_width="20dp"
+                android:layout_height="match_parent" />
+
+            <ImageButton
+                android:id="@+id/aboutProfileIconButton"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@color/transparent"
+                android:backgroundTint="@color/transparent"
+                android:contentDescription="@string/profile_icon_button"
+                android:scaleType="fitCenter"
+                android:src="@drawable/profile" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/aboutFullNameContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="70dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/aboutFullNameLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:text="@string/full_name"
+                android:textAlignment="textStart"
+                android:textColor="@color/black"
+                android:textSize="25sp"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/aboutFullNameValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:text="@string/na"
+                android:textAlignment="textStart"
+                android:textColor="@color/gray"
+                android:textSize="25sp"
+                android:textStyle="normal" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/aboutGenderContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/aboutGenderLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:text="@string/gender"
+                android:textAlignment="textStart"
+                android:textColor="@color/black"
+                android:textSize="25sp"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/aboutGenderValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:text="@string/na"
+                android:textAlignment="textStart"
+                android:textColor="@color/gray"
+                android:textSize="25sp"
+                android:textStyle="normal" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/aboutCountryContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/aboutCountryLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:text="@string/country"
+                android:textAlignment="textStart"
+                android:textColor="@color/black"
+                android:textSize="25sp"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/aboutCountryValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:text="@string/na"
+                android:textAlignment="textStart"
+                android:textColor="@color/gray"
+                android:textSize="25sp"
+                android:textStyle="normal" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/aboutSportsContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/aboutSportsLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:text="@string/sports"
+                android:textAlignment="textStart"
+                android:textColor="@color/black"
+                android:textSize="25sp"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/aboutSportsValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:text="@string/na"
+                android:textAlignment="textStart"
+                android:textColor="@color/gray"
+                android:textSize="25sp"
+                android:textStyle="normal" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/aboutButtonContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/aboutBackButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/light_purple"
+                android:text="@string/go_back"
+                android:textColor="@color/black" />
+
+            <Space
+                android:layout_width="15dp"
+                android:layout_height="match_parent" />
+
+            <Button
+                android:id="@+id/aboutDialogButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/light_orange"
+                android:text="@string/dialog"
+                android:textColor="@color/black" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
