@@ -4,7 +4,7 @@ import android.view.View;
 
 import com.google.android.material.snackbar.Snackbar;
 
-public class Utilities {
+public class GeneralUtil {
     private static final int BLACK = 0xFF000000;
     private static final int LIGHT_TEAL = 0xFFE9FFF7;
     private static final int LIGHT_PINK = 0xFFF2AEF3;
