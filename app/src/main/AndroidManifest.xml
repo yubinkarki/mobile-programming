@@ -15,7 +15,8 @@
         tools:targetApi="34">
         <activity
             android:name=".unit_4.Home"
-            android:exported="true">
+            android:exported="true"
+            android:windowSoftInputMode="stateAlwaysHidden">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
