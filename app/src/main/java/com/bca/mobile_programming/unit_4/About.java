@@ -1,27 +1,71 @@
 package com.bca.mobile_programming.unit_4;
 
+import java.util.ArrayList;
+
 import android.util.Log;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Toast;
 import android.app.Activity;
 import android.widget.Button;
+import android.content.Intent;
+import android.widget.TextView;
+import android.widget.ImageButton;
+import android.content.res.Resources;
 
 import com.bca.mobile_programming.R;
+import com.bca.mobile_programming.unit_1.GeneralUtil;
 
 public class About extends Activity {
     @Override
     protected void onCreate(Bundle b) {
         super.onCreate(b);
-        setContentView(R.layout.unit_2_hello);
+        setContentView(R.layout.unit_4_about);
 
         Log.d("myStateLog", "About - onCreate");
 
-        Button cancelButton = findViewById(R.id.cancelButton);
-        Button submitButton = findViewById(R.id.submitButton);
+        Resources res = getResources();
 
-        cancelButton.setOnClickListener(v -> Toast.makeText(getApplicationContext(), "Cancelled", Toast.LENGTH_SHORT).show());
+        Intent i = getIntent();
 
-        submitButton.setOnClickListener(v -> Toast.makeText(getApplicationContext(), "Submitted", Toast.LENGTH_SHORT).show());
+        String gender = i.getStringExtra("gender");
+        String country = i.getStringExtra("country");
+        String fullName = i.getStringExtra("fullName");
+        ArrayList<String> sports = i.getStringArrayListExtra("sports");
+
+        View rootLayout = findViewById(R.id.aboutRoot);
+        Button backButton = findViewById(R.id.aboutBackButton);
+        TextView sportsText = findViewById(R.id.aboutSportsValue);
+        TextView genderText = findViewById(R.id.aboutGenderValue);
+        Button dialogButton = findViewById(R.id.aboutDialogButton);
+        TextView countryText = findViewById(R.id.aboutCountryValue);
+        TextView fullNameText = findViewById(R.id.aboutFullNameValue);
+        ImageButton profileIconButton = findViewById(R.id.aboutProfileIconButton);
+
+        backButton.setOnClickListener(v -> finish());
+
+        dialogButton.setOnClickListener(v -> Toast.makeText(getApplicationContext(), "Dialog", Toast.LENGTH_SHORT).show());
+
+        profileIconButton.setOnClickListener(v -> {
+            String closeMessage = "Dump";
+            String message = "This is profile icon";
+
+            GeneralUtil.showMySnack(rootLayout, message, closeMessage);
+        });
+
+        genderText.setText(gender);
+        countryText.setText(country);
+
+        if (fullName != null && !fullName.isEmpty()) fullNameText.setText(fullName);
+        else fullNameText.setText(res.getString(R.string.anonymous));
+
+        if (sports != null && !sports.isEmpty()) {
+            String joinedSports = String.join(", ", sports);
+            sportsText.setText(joinedSports);
+        } else {
+            Toast.makeText(getApplicationContext(), "No sports found", Toast.LENGTH_SHORT).show();
+            sportsText.setText(res.getString(R.string.na));
+        }
     }
 
     @Override
