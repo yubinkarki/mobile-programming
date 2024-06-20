@@ -13,7 +13,7 @@ public class Hello extends Activity {
         super.onCreate(b);
         setContentView(R.layout.unit_3_constraint);
 
-        Spinner countrySpinner = findViewById(R.id.countrySpinner);
+        Spinner countrySpinner = findViewById(R.id.constraintCountrySpinner);
         String[] countryList = {"Korea", "Netherlands", "United Kingdom", "Germany"};
 
         ArrayAdapter<String> countryAdapter = new ArrayAdapter<>(this, R.layout.unit_3_spinner_item, countryList);
