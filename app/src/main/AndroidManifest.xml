@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    package="com.bca.mobile_programming">
+    xmlns:tools="http://schemas.android.com/tools">
 
     <application
         android:allowBackup="true"
@@ -28,6 +27,6 @@
         <activity
             android:name=".unit_4.Contact"
             android:excludeFromRecents="true"
-            android:theme="@style/myDialog" />
+            android:theme="@style/Theme.AppCompat.Dialog" />
     </application>
 </manifest>
