@@ -26,13 +26,14 @@
         android:layout_marginHorizontal="20dp"
         android:layout_marginTop="20dp"
         android:autofillHints="name"
-        android:background="@color/white"
+        android:background="@drawable/rounded_corner"
         android:hint="@string/name_hint"
         android:inputType="text"
         android:paddingHorizontal="20dp"
         android:paddingVertical="10dp"
         android:textColor="@color/black"
         android:textColorHint="@color/gray"
+        android:textCursorDrawable="@drawable/input_cursor"
         android:textSize="25sp" />
 
     <LinearLayout
