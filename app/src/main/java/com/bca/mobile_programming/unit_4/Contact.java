@@ -2,21 +2,26 @@ package com.bca.mobile_programming.unit_4;
 
 import android.util.Log;
 import android.os.Bundle;
+import android.view.Window;
 import android.widget.Toast;
-import android.app.Activity;
 import android.widget.Button;
 import android.content.Intent;
 
+import androidx.activity.OnBackPressedCallback;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.bca.mobile_programming.R;
 
-public class Contact extends Activity {
+public class Contact extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle b) {
         super.onCreate(b);
+        supportRequestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.unit_2_hello);
 
-        this.setFinishOnTouchOutside(false);
         Log.d("myStateLog", "Contact - onCreate");
+
+        this.setFinishOnTouchOutside(false);
 
         Button submitButton = findViewById(R.id.helloSubmitButton);
         Button cancelButton = findViewById(R.id.helloCancelButton);
@@ -29,14 +34,18 @@ public class Contact extends Activity {
             setResult(RESULT_OK, i);
             finish();
         });
-    }
 
-    @Override
-    public void onBackPressed() {
-        Intent i = new Intent();
-        i.putExtra("contactData", "Back Button");
-        setResult(RESULT_OK, i);
-        finish();
+        OnBackPressedCallback sendDataOnBack = new OnBackPressedCallback(true) {
+            @Override
+            public void handleOnBackPressed() {
+                Intent i = new Intent();
+                i.putExtra("contactData", "Back Button");
+                setResult(RESULT_OK, i);
+                finish();
+            }
+        };
+
+        getOnBackPressedDispatcher().addCallback(this, sendDataOnBack);
     }
 
     @Override
