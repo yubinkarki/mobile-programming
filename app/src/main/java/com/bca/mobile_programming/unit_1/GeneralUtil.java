@@ -21,8 +21,7 @@ public class GeneralUtil {
     }
 
     public enum ScreenCode {
-        ABOUT(1),
-        CONTACT(2);
+        ABOUT(1), CONTACT(2);
 
         private final int code;
 
