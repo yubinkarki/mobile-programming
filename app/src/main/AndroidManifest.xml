@@ -28,5 +28,7 @@
             android:name=".unit_4.Contact"
             android:excludeFromRecents="true"
             android:theme="@style/Theme.AppCompat.Dialog" />
+
+        <activity android:name=".unit_5.ImagesFragmentActivity" />
     </application>
 </manifest>
