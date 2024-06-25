@@ -9,7 +9,6 @@ import android.os.Looper;
 import android.os.Bundle;
 import android.view.View;
 import android.os.Handler;
-import android.app.Activity;
 import android.view.KeyEvent;
 import android.widget.Button;
 import android.content.Intent;
@@ -22,11 +21,14 @@ import android.widget.RadioGroup;
 import android.widget.ArrayAdapter;
 import android.content.res.Resources;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.bca.mobile_programming.R;
 import com.bca.mobile_programming.unit_1.GeneralUtil;
 import com.bca.mobile_programming.unit_1.KeyboardUtil;
+import com.bca.mobile_programming.unit_5.ImagesFragmentActivity;
 
-public class Home extends Activity {
+public class Home extends AppCompatActivity {
     private TextView headingText;
     private EditText fullNameInput;
     private KeyboardUtil keyboardUtil;
@@ -38,6 +40,8 @@ public class Home extends Activity {
         setContentView(R.layout.unit_3_constraint);
 
         Log.d("myStateLog", "Home - onCreate");
+
+        if (getSupportActionBar() != null) getSupportActionBar().hide();
 
         Resources res = getResources();
         keyboardUtil = new KeyboardUtil(this);
@@ -56,6 +60,7 @@ public class Home extends Activity {
         Button aboutButton = findViewById(R.id.constraintAboutButton);
         Button dialogButton = findViewById(R.id.constraintDialogButton);
         Button resultButton = findViewById(R.id.constraintResultButton);
+        Button imagesButton = findViewById(R.id.constraintFragmentButton);
         RadioGroup genderGroup = findViewById(R.id.constraintGenderGroup);
         Spinner countrySpinner = findViewById(R.id.constraintCountrySpinner);
         Button activityDialogButton = findViewById(R.id.constraintActivityButton);
@@ -157,6 +162,11 @@ public class Home extends Activity {
                 fullNameInput.setFocusableInTouchMode(true);
                 return true;
             } else return false;
+        });
+
+        imagesButton.setOnClickListener(v -> {
+            Intent i = new Intent(Home.this, ImagesFragmentActivity.class);
+            startActivity(i);
         });
     }
 
