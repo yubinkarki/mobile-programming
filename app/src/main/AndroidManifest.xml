@@ -10,6 +10,7 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
+
         android:theme="@style/Theme.Mobile_programming"
         tools:targetApi="34">
         <activity
@@ -30,5 +31,7 @@
             android:theme="@style/Theme.AppCompat.Dialog" />
 
         <activity android:name=".unit_5.ImagesFragmentActivity" />
+
+        <activity android:name=".unit_5.FragmentSwitchActivity" />
     </application>
 </manifest>
