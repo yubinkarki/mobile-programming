@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/myLogoRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_purple"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".unit_5.MyLogoFragment">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="250dp"
+        android:contentDescription="@string/yk_logo"
+        android:paddingVertical="20dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/yk_logo" />
+</LinearLayout>
