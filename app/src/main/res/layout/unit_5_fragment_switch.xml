@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragmentSwitchRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_teal"
+    android:orientation="vertical"
+    tools:context=".unit_5.FragmentSwitchActivity">
+
+    <LinearLayout
+        android:id="@+id/fragmentSwitchButtonContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/fragmentSwitchOneButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/blue"
+            android:text="@string/fragment_one"
+            android:textColor="@color/white" />
+
+        <Space
+            android:layout_width="15dp"
+            android:layout_height="match_parent" />
+
+        <Button
+            android:id="@+id/fragmentSwitchTwoButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/blue"
+            android:text="@string/fragment_two"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragmentSwitchBottomContainer"
+        android:name="com.bca.mobile_programming.unit_5.FallbackFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp" />
+</LinearLayout>
