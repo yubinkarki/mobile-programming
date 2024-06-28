@@ -21,11 +21,13 @@
     <string name="contact">Contact</string>
     <string name="test_one">Test 1</string>
     <string name="test_six">Test 6</string>
+    <string name="my_name">My Name</string>
     <string name="test_two">Test 2</string>
     <string name="country">Country:</string>
     <string name="app_name">MP 2024</string>
     <string name="test_four">Test 4</string>
     <string name="test_five">Test 5</string>
+    <string name="switcher">Switcher</string>
     <string name="activity">Activity</string>
     <string name="kyc_form">KYC Form</string>
     <string name="football">Football</string>
@@ -39,8 +41,11 @@
     <string name="second_row">Second Row</string>
     <string name="basketball">Basketball</string>
     <string name="hello_world">Hello World</string>
+    <string name="fragment_one">Fragment One</string>
+    <string name="fragment_two">Fragment Two</string>
     <string name="name_hint">Enter your name</string>
     <string name="welcome_back">Welcome Back</string>
+    <string name="page_not_found">Page not found</string>
     <string name="headphone_image">Pink Headphone</string>
     <string name="select_gender">Select your gender</string>
     <string name="choose_country">Choose your country</string>
