@@ -8,28 +8,26 @@ import android.graphics.Rect;
 import android.view.ViewGroup;
 import android.content.Context;
 import android.widget.EditText;
+import android.view.ViewTreeObserver;
 import android.view.inputmethod.InputMethodManager;
-import android.view.ViewTreeObserver.OnGlobalLayoutListener;
 
 public class KeyboardUtil {
-    private final View rootView;
     public boolean isKeyboardVisible;
+
+    private final View rootView;
     private static final int KEYBOARD_HEIGHT = 150;
-    private final OnGlobalLayoutListener keyboardListener;
+    private final ViewTreeObserver.OnGlobalLayoutListener kl = this::handleKeyboardVisibilityChange;
 
     public KeyboardUtil(Activity activity) {
         rootView = activity.findViewById(android.R.id.content);
-        keyboardListener = this::handleKeyboardVisibilityChange;
-        rootView.getViewTreeObserver().addOnGlobalLayoutListener(keyboardListener);
+        rootView.getViewTreeObserver().addOnGlobalLayoutListener(kl);
     }
 
     private void handleKeyboardVisibilityChange() {
         Rect r = new Rect();
-
         rootView.getWindowVisibleDisplayFrame(r);
-        rootView.getRootView();
 
-        int screenHeight = rootView.getHeight();
+        int screenHeight = rootView.getRootView().getHeight();
         int keypadHeight = screenHeight - r.bottom;
         int keyboardHeightThreshold = (int) (KEYBOARD_HEIGHT * rootView.getResources().getDisplayMetrics().density);
         boolean isKeyboardNowVisible = keypadHeight > keyboardHeightThreshold;
@@ -47,7 +45,7 @@ public class KeyboardUtil {
     }
 
     public void removeListener() {
-        rootView.getViewTreeObserver().removeOnGlobalLayoutListener(keyboardListener);
+        rootView.getViewTreeObserver().removeOnGlobalLayoutListener(kl);
     }
 
     public void hideKeyboard(View view) {
