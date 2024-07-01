@@ -7,11 +7,14 @@ import java.util.concurrent.atomic.AtomicReference;
 import android.util.Log;
 import android.os.Looper;
 import android.os.Bundle;
+import android.view.Menu;
 import android.view.View;
 import android.os.Handler;
+import android.view.MenuItem;
 import android.view.KeyEvent;
 import android.widget.Button;
 import android.content.Intent;
+import android.text.Spannable;
 import android.widget.Spinner;
 import android.app.AlertDialog;
 import android.widget.EditText;
@@ -19,16 +22,26 @@ import android.widget.CheckBox;
 import android.widget.TextView;
 import android.widget.RadioGroup;
 import android.widget.ArrayAdapter;
+import android.text.SpannableString;
 import android.content.res.Resources;
+import android.text.style.AbsoluteSizeSpan;
+import android.text.style.LeadingMarginSpan;
+import android.text.style.ForegroundColorSpan;
+import android.graphics.drawable.ColorDrawable;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
+import androidx.core.content.ContextCompat;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.bca.mobile_programming.R;
 import com.bca.mobile_programming.unit_1.GeneralUtil;
 import com.bca.mobile_programming.unit_1.KeyboardUtil;
+import com.bca.mobile_programming.unit_5.FragmentSwitchActivity;
 import com.bca.mobile_programming.unit_5.ImagesFragmentActivity;
 
 public class Home extends AppCompatActivity {
+    private View rootLayout;
     private TextView headingText;
     private EditText fullNameInput;
     private KeyboardUtil keyboardUtil;
@@ -36,15 +49,28 @@ public class Home extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle b) {
+        getWindow().setStatusBarColor(ContextCompat.getColor(this, R.color.lighter_blue));
+
         super.onCreate(b);
         setContentView(R.layout.unit_3_constraint);
 
-        Log.d("myStateLog", "Home - onCreate");
-
-        if (getSupportActionBar() != null) getSupportActionBar().hide();
-
         Resources res = getResources();
         keyboardUtil = new KeyboardUtil(this);
+
+        if (getSupportActionBar() != null) {
+            ActionBar bar = getSupportActionBar();
+            int color = ContextCompat.getColor(this, R.color.lighter_blue);
+            int textColor = ContextCompat.getColor(this, R.color.dark_gray);
+            Spannable text = new SpannableString(res.getString(R.string.happy_dashain));
+
+            text.setSpan(new ForegroundColorSpan(textColor), 0, text.length(), Spannable.SPAN_INCLUSIVE_INCLUSIVE);
+            text.setSpan(new AbsoluteSizeSpan(20, true), 0, text.length(), Spannable.SPAN_INCLUSIVE_INCLUSIVE);
+            text.setSpan(new LeadingMarginSpan.Standard(20), 0, text.length(), Spannable.SPAN_INCLUSIVE_INCLUSIVE);
+
+            bar.setTitle(text);
+            bar.setElevation(10);
+            bar.setBackgroundDrawable(new ColorDrawable(color));
+        }
 
         String noText = res.getString(R.string.no);
         String yesText = res.getString(R.string.yes);
@@ -53,12 +79,13 @@ public class Home extends AppCompatActivity {
         String alertMessage = res.getString(R.string.alert_message);
         String[] planetList = res.getStringArray(R.array.planet_list);
 
-        View rootLayout = findViewById(R.id.constraintRoot);
+        rootLayout = findViewById(R.id.constraintRoot);
         headingText = findViewById(R.id.constraintHeadingText);
         fullNameInput = findViewById(R.id.constraintFullNameInput);
         Button resetButton = findViewById(R.id.constraintResetButton);
         Button aboutButton = findViewById(R.id.constraintAboutButton);
         Button dialogButton = findViewById(R.id.constraintDialogButton);
+        Button switchButton = findViewById(R.id.constraintSwitchButton);
         Button resultButton = findViewById(R.id.constraintResultButton);
         Button imagesButton = findViewById(R.id.constraintFragmentButton);
         RadioGroup genderGroup = findViewById(R.id.constraintGenderGroup);
@@ -168,6 +195,11 @@ public class Home extends AppCompatActivity {
             Intent i = new Intent(Home.this, ImagesFragmentActivity.class);
             startActivity(i);
         });
+
+        switchButton.setOnClickListener(v -> {
+            Intent i = new Intent(Home.this, FragmentSwitchActivity.class);
+            startActivity(i);
+        });
     }
 
     @Override
@@ -181,21 +213,31 @@ public class Home extends AppCompatActivity {
     }
 
     @Override
-    protected void onStart() {
-        super.onStart();
-        Log.d("myStateLog", "Home - onStart");
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.app_options, menu);
+        return super.onCreateOptionsMenu(menu);
     }
 
     @Override
-    protected void onResume() {
-        super.onResume();
-        Log.d("myStateLog", "Home - onResume");
-    }
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        String close = "Go Away";
+        int selectedItem = item.getItemId();
 
-    @Override
-    protected void onRestart() {
-        super.onRestart();
-        Log.d("myStateLog", "Home - onRestart");
+        if (selectedItem == R.id.appOptionsAbout) {
+            GeneralUtil.showMySnack(rootLayout, "You pressed About. Awesome!", close);
+            return true;
+        } else if (selectedItem == R.id.appOptionsServices) {
+            GeneralUtil.showMySnack(rootLayout, "You pressed Services. Great!", close);
+            return true;
+        } else if (selectedItem == R.id.appOptionsTheme) {
+            GeneralUtil.showMySnack(rootLayout, "You pressed Theme. Sugoi!", close);
+            return true;
+        } else if (selectedItem == R.id.appOptionsLogout) {
+            GeneralUtil.showMySnack(rootLayout, "You pressed Logout. Naniii!", close);
+            return true;
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 
     @Override
