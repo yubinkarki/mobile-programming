@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/postItemOptionsDelete"
+        android:title="@string/delete" />
+    <item
+        android:id="@+id/postItemOptionsDetails"
+        android:title="@string/details" />
+    <item
+        android:id="@+id/postItemOptionsShowLess"
+        android:title="@string/show_less" />
+    <item
+        android:id="@+id/postItemOptionsNotInterested"
+        android:title="@string/not_interested"
+        app:showAsAction="withText" />
+</menu>
