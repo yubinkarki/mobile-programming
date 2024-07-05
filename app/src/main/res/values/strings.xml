@@ -3,6 +3,7 @@
     <string name="na">N/A</string>
     <string name="cross">X</string>
     <string name="yes">Yes</string>
+    <string name="hyphen">-</string>
     <string name="empty">""</string>
     <string name="open">Open</string>
     <string name="male">Male</string>
@@ -17,6 +18,7 @@
     <string name="images">Images</string>
     <string name="result">Result</string>
     <string name="logout">Logout</string>
+    <string name="delete">Delete</string>
     <string name="gender">Gender:</string>
     <string name="sports">Sports:</string>
     <string name="go_back">Go Back</string>
@@ -26,6 +28,8 @@
     <string name="test_six">Test 6</string>
     <string name="my_name">My Name</string>
     <string name="test_two">Test 2</string>
+    <string name="dismiss">Dismiss</string>
+    <string name="details">Details</string>
     <string name="country">Country:</string>
     <string name="app_name">MP 2024</string>
     <string name="test_four">Test 4</string>
@@ -36,6 +40,7 @@
     <string name="kyc_form">KYC Form</string>
     <string name="football">Football</string>
     <string name="test_three">Test 3</string>
+    <string name="show_less">Show Less</string>
     <string name="anonymous">Anonymous</string>
     <string name="badminton">Badminton</string>
     <string name="third_row">Third Row</string>
@@ -51,14 +56,19 @@
     <string name="name_hint">Enter your name</string>
     <string name="welcome_back">Welcome Back</string>
     <string name="happy_dashain">Happy Dashain</string>
+    <string name="not_interested">Not Interested</string>
     <string name="page_not_found">Page not found</string>
     <string name="headphone_image">Pink Headphone</string>
     <string name="select_gender">Select your gender</string>
     <string name="choose_country">Choose your country</string>
     <string name="full_name_hint">Enter your full name</string>
+    <string name="positive">You pressed positive button</string>
+    <string name="negative">You pressed negative button</string>
     <string name="profile_icon_button">Profile icon button</string>
     <string name="sports_question">Which sports do you like?</string>
     <string name="alert_message">Do you want to be successful in life?</string>
+
+    <string name="star_emoji">⭐️</string>
 
     <string-array name="country_list">
         <item>Nepal</item>
