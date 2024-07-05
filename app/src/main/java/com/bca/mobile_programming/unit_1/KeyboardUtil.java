@@ -12,19 +12,19 @@ import android.view.ViewTreeObserver;
 import android.view.inputmethod.InputMethodManager;
 
 public class KeyboardUtil {
-    public boolean isKeyboardVisible;
-
     private final View rootView;
-    private static final int KEYBOARD_HEIGHT = 150;
-    private final ViewTreeObserver.OnGlobalLayoutListener kl = this::handleKeyboardVisibilityChange;
+    public boolean isKeyboardVisible;
+    private final ViewTreeObserver.OnGlobalLayoutListener kl;
 
     public KeyboardUtil(Activity activity) {
+        kl = this::handleKeyboardVisibilityChange;
         rootView = activity.findViewById(android.R.id.content);
         rootView.getViewTreeObserver().addOnGlobalLayoutListener(kl);
     }
 
     private void handleKeyboardVisibilityChange() {
         Rect r = new Rect();
+        int KEYBOARD_HEIGHT = 150;
         rootView.getWindowVisibleDisplayFrame(r);
 
         int screenHeight = rootView.getRootView().getHeight();

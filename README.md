@@ -1,4 +1,4 @@
-# Mobile Programming Practicals
+# [Mobile Programming](https://yubinkarki.notion.site/Mobile-Programming-4a78b1019b5a427cacc09e9ad90e94ca) 
 
 Hands on with Android Studio for native Android app development for BCA 6th Semester.  
 Each unit is separated in their respective directory.  
