@@ -10,6 +10,8 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
 import android.os.Handler;
+import android.widget.Toast;
+import android.app.Activity;
 import android.view.MenuItem;
 import android.view.KeyEvent;
 import android.widget.Button;
@@ -20,6 +22,8 @@ import android.app.AlertDialog;
 import android.widget.EditText;
 import android.widget.CheckBox;
 import android.widget.TextView;
+import android.widget.PopupMenu;
+import android.view.ContextMenu;
 import android.widget.RadioGroup;
 import android.widget.ArrayAdapter;
 import android.text.SpannableString;
@@ -33,6 +37,8 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.core.content.ContextCompat;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
 
 import com.bca.mobile_programming.R;
 import com.bca.mobile_programming.unit_1.GeneralUtil;
@@ -41,21 +47,20 @@ import com.bca.mobile_programming.unit_5.FragmentSwitchActivity;
 import com.bca.mobile_programming.unit_5.ImagesFragmentActivity;
 
 public class Home extends AppCompatActivity {
+    private Resources res;
     private View rootLayout;
+    private Button dashButton;
     private TextView headingText;
     private EditText fullNameInput;
     private KeyboardUtil keyboardUtil;
-    private final int contactCode = GeneralUtil.ScreenCode.CONTACT.getCode();
+    private ActivityResultLauncher<Intent> contactLauncher;
 
     @Override
-    protected void onCreate(Bundle b) {
-        getWindow().setStatusBarColor(ContextCompat.getColor(this, R.color.lighter_blue));
+    protected void onStart() {
+        super.onStart();
 
-        super.onCreate(b);
-        setContentView(R.layout.unit_3_constraint);
-
-        Resources res = getResources();
         keyboardUtil = new KeyboardUtil(this);
+        getWindow().setStatusBarColor(ContextCompat.getColor(this, R.color.lighter_blue));
 
         if (getSupportActionBar() != null) {
             ActionBar bar = getSupportActionBar();
@@ -71,6 +76,25 @@ public class Home extends AppCompatActivity {
             bar.setElevation(10);
             bar.setBackgroundDrawable(new ColorDrawable(color));
         }
+    }
+
+    @Override
+    protected void onCreate(Bundle b) {
+        super.onCreate(b);
+        setContentView(R.layout.unit_3_constraint);
+
+        res = getResources();
+
+        contactLauncher = registerForActivityResult(new ActivityResultContracts.StartActivityForResult(), result -> {
+            if (result.getResultCode() == Activity.RESULT_OK) {
+                Intent data = result.getData();
+
+                if (data != null) {
+                    String message = data.getStringExtra("contactData");
+                    headingText.setText(message);
+                }
+            }
+        });
 
         String noText = res.getString(R.string.no);
         String yesText = res.getString(R.string.yes);
@@ -80,6 +104,7 @@ public class Home extends AppCompatActivity {
         String[] planetList = res.getStringArray(R.array.planet_list);
 
         rootLayout = findViewById(R.id.constraintRoot);
+        dashButton = findViewById(R.id.constraintDashButton);
         headingText = findViewById(R.id.constraintHeadingText);
         fullNameInput = findViewById(R.id.constraintFullNameInput);
         Button resetButton = findViewById(R.id.constraintResetButton);
@@ -97,8 +122,8 @@ public class Home extends AppCompatActivity {
         CheckBox volleyballCheckbox = findViewById(R.id.constraintCheckboxVolleyball);
 
         AlertDialog.Builder alertBuilder = new AlertDialog.Builder(this);
-        ArrayAdapter<String> countryAdapter = new ArrayAdapter<>(this, R.layout.unit_3_spinner_item, planetList);
 
+        ArrayAdapter<String> countryAdapter = new ArrayAdapter<>(this, R.layout.unit_3_spinner_item, planetList);
         countrySpinner.setAdapter(countryAdapter);
 
         resetButton.setOnClickListener(v -> {
@@ -141,9 +166,8 @@ public class Home extends AppCompatActivity {
 
             CheckBox[] checkboxes = {footballCheckbox, badmintonCheckbox, basketballCheckbox, volleyballCheckbox};
 
-            for (CheckBox checkbox : checkboxes) {
+            for (CheckBox checkbox : checkboxes)
                 if (checkbox.isChecked()) selectedSports.add(checkbox.getText().toString());
-            }
 
             i.putExtra("fullName", fullName);
             i.putExtra("gender", selectedGender.get());
@@ -158,13 +182,20 @@ public class Home extends AppCompatActivity {
 
         activityDialogButton.setOnClickListener(v -> {
             Intent i = new Intent(Home.this, Contact.class);
-            startActivityForResult(i, contactCode);
+            boolean keyboard = keyboardUtil.isKeyboardVisible;
+            Handler handler = new Handler(Looper.getMainLooper());
+
+            if (keyboard) {
+                keyboardUtil.hideKeyboard(v);
+                handler.postDelayed(() -> contactLauncher.launch(i), 150);
+                // handler.postDelayed(() -> startActivityForResult(i, contactCode), 150);
+            } else contactLauncher.launch(i);
         });
 
         dialogButton.setOnClickListener(v -> {
-            String closeMessage = "Dismiss";
-            String positive = "You pressed positive button";
-            String negative = "You pressed negative button";
+            String positive = res.getString(R.string.positive);
+            String negative = res.getString(R.string.negative);
+            String closeMessage = res.getString(R.string.dismiss);
 
             alertBuilder.setTitle(alertTitle).setMessage(alertMessage).setCancelable(false);
 
@@ -187,6 +218,7 @@ public class Home extends AppCompatActivity {
                 keyboardUtil.hideKeyboard(v);
                 fullNameInput.setFocusable(false);
                 fullNameInput.setFocusableInTouchMode(true);
+                fullNameInput.setText(fullNameInput.getText().toString());
                 return true;
             } else return false;
         });
@@ -200,9 +232,36 @@ public class Home extends AppCompatActivity {
             Intent i = new Intent(Home.this, FragmentSwitchActivity.class);
             startActivity(i);
         });
+
+        switchButton.setOnLongClickListener(v -> {
+            Toast.makeText(getApplicationContext(), "Long Press", Toast.LENGTH_SHORT).show();
+            return true;
+        });
+
+        dashButton.setOnClickListener(v -> {
+            PopupMenu popup = new PopupMenu(Home.this, v);
+            popup.getMenuInflater().inflate(R.menu.popup_options, popup.getMenu());
+
+            popup.setOnMenuItemClickListener(item -> {
+                String close = "Bye";
+                int selectedItem = item.getItemId();
+
+                if (selectedItem == R.id.popupOptionsAbout) {
+                    GeneralUtil.showMySnack(rootLayout, "Popup about", close);
+                    return true;
+                } else if (selectedItem == R.id.popupOptionsServices) {
+                    GeneralUtil.showMySnack(rootLayout, "Popup services", close);
+                    return true;
+                }
+
+                return false;
+            });
+
+            popup.show();
+        });
     }
 
-    @Override
+    /* @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
@@ -210,7 +269,7 @@ public class Home extends AppCompatActivity {
             String message = data.getStringExtra("contactData");
             headingText.setText(message);
         }
-    }
+    } */
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -238,6 +297,23 @@ public class Home extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
+        super.onCreateContextMenu(menu, v, menuInfo);
+        getMenuInflater().inflate(R.menu.post_item_options, menu);
+    }
+
+    @Override
+    public boolean onContextItemSelected(@NonNull MenuItem item) {
+        return super.onContextItemSelected(item);
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        registerForContextMenu(dashButton);
     }
 
     @Override
