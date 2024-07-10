@@ -4,6 +4,7 @@
     android:layout_height="wrap_content"
     android:paddingHorizontal="20dp"
     android:paddingVertical="15dp"
+    android:text="@string/na"
     android:textAlignment="textStart"
     android:textColor="@color/dark_teal"
     android:textSize="20sp"

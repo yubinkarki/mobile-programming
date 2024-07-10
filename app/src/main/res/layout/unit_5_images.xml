@@ -20,7 +20,7 @@
         android:name="com.bca.mobile_programming.unit_5.NameFragment"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
+        android:layout_weight="0.6"
         tools:layout="@layout/unit_5_name" />
 
     <androidx.fragment.app.FragmentContainerView

@@ -30,6 +30,7 @@
         android:layout_weight="1"
         android:background="@color/green"
         android:gravity="center"
+        android:textColor="@color/white"
         android:text="@string/third_row"
         android:textSize="35sp" />
 </LinearLayout>

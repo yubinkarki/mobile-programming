@@ -6,6 +6,8 @@
     android:layout_height="match_parent"
     android:background="@color/light_teal"
     android:orientation="vertical"
+    android:paddingVertical="40dp"
+    android:paddingHorizontal="20dp"
     android:weightSum="5"
     tools:context=".unit_2.Hello">
 
@@ -13,7 +15,6 @@
         android:id="@+id/helloHeadingText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
         android:text="@string/contact"
         android:textAlignment="center"
         android:textColor="@color/dark_purple"
@@ -23,7 +24,7 @@
         android:id="@+id/helloFullNameInput"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="20dp"
+        android:layout_marginHorizontal="10dp"
         android:layout_marginTop="20dp"
         android:autofillHints="name"
         android:background="@drawable/rounded_corner"
@@ -34,13 +35,12 @@
         android:textColor="@color/black"
         android:textColorHint="@color/gray"
         android:textCursorDrawable="@drawable/input_cursor"
-        android:textSize="25sp" />
+        android:textSize="22sp" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:layout_marginBottom="50dp"
         android:gravity="center"
         android:orientation="horizontal">
 
@@ -49,11 +49,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/gray"
+            android:stateListAnimator="@null"
             android:text="@string/cancel"
             android:textColor="@color/white" />
 
-        <View
-            android:layout_width="20dp"
+        <Space
+            android:layout_width="5dp"
             android:layout_height="match_parent" />
 
         <Button
@@ -61,6 +62,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/dark_purple"
+            android:stateListAnimator="@null"
             android:text="@string/submit"
             android:textColor="@color/white" />
     </LinearLayout>

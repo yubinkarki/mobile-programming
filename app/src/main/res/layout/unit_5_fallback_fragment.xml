@@ -4,7 +4,7 @@
     android:id="@+id/fallbackFragmentRoot"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/light_gray"
+    android:background="@color/lighter_gray"
     android:gravity="center"
     android:orientation="vertical"
     tools:context=".unit_5.FallbackFragment">
