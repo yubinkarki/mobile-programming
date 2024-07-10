@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/addCalculatorRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:paddingHorizontal="30dp"
+    android:paddingVertical="30dp">
+
+    <TextView
+        android:id="@+id/addCalculatorHeading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="serif"
+        android:text="@string/calculate_sum"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="26sp" />
+
+    <EditText
+        android:id="@+id/addCalculatorFirstNumberInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:autofillHints="name"
+        android:background="@drawable/rounded_input"
+        android:hint="@string/enter_first_number"
+        android:inputType="number"
+        android:paddingHorizontal="15dp"
+        android:paddingVertical="10dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/gray"
+        android:textCursorDrawable="@drawable/input_cursor"
+        android:textSize="22sp" />
+
+    <EditText
+        android:id="@+id/addCalculatorSecondNumberInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:autofillHints="name"
+        android:background="@drawable/rounded_input"
+        android:hint="@string/enter_second_number"
+        android:inputType="number"
+        android:paddingHorizontal="15dp"
+        android:paddingVertical="10dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/gray"
+        android:textCursorDrawable="@drawable/input_cursor"
+        android:textSize="22sp" />
+
+    <Button
+        android:id="@+id/addCalculatorCalculateButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/dark_teal"
+        android:stateListAnimator="@null"
+        android:text="@string/calculate"
+        android:textColor="@color/white" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/addCalculatorResultText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed-light"
+            android:text="@string/result"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <Space
+            android:layout_width="5dp"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed-light"
+            android:text="@string/equals"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <Space
+            android:layout_width="5dp"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:id="@+id/addCalculatorResultValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed-light"
+            android:text="@string/zero"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+</LinearLayout>
