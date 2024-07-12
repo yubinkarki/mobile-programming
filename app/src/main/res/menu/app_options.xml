@@ -5,8 +5,8 @@
         android:id="@+id/appOptionsServices"
         android:title="@string/services" />
     <item
-        android:id="@+id/appOptionsAbout"
-        android:title="@string/about" />
+        android:id="@+id/appOptionsListView"
+        android:title="@string/list_view" />
     <item
         android:id="@+id/appOptionsTheme"
         android:title="@string/theme" />
