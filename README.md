@@ -1,19 +1,19 @@
-# [Mobile Programming](https://yubinkarki.notion.site/Mobile-Programming-4a78b1019b5a427cacc09e9ad90e94ca) 
+## [Mobile Programming](https://yubinkarki.notion.site/Mobile-Programming-4a78b1019b5a427cacc09e9ad90e94ca) 
 
 Hands on with Android Studio for native Android app development for BCA 6th Semester.  
 Each unit is separated in their respective directory.  
 
-# Units
+## Units
 
-- [Unit 1: Introduction to MP](#unit-1---introduction-to-mobile-programming)
-- [Unit 2: Basic Layout](#unit-2---introduction-to-android-programming)
-- [Unit 3: User Interface](#unit-3---designing-the-ui)
-- [Unit 4: Android Activity](#unit-4---android-activity)
-- [Unit 5: UI Fragments, Menus and Dialogs](#unit-5---ui-fragments-menus-and-dialogs)
-- [unit 6: ListView, GridView and RecyclerView](#unit-6---listview-gridview-and-recyclerview)
-- [Unit 7: Advanced Android Concepts](#unit-7---advanced-android-concepts)
+- [Unit 1 - Introduction to MP](#unit-1---introduction-to-mobile-programming)
+- [Unit 2 - Basic Layout](#unit-2---introduction-to-android-programming)
+- [Unit 3 - User Interface](#unit-3---designing-the-ui)
+- [Unit 4 - Android Activity](#unit-4---android-activity)
+- [Unit 5 - UI Fragments, Menus and Dialogs](#unit-5---ui-fragments-menus-and-dialogs)
+- [unit 6 - ListView, GridView and RecyclerView](#unit-6---listview-gridview-and-recyclerview)
+- [Unit 7 - Advanced Android Concepts](#unit-7---advanced-android-concepts)
 
-# Development Setup
+## Development Setup
 
 ```
 - JDK
@@ -22,7 +22,7 @@ Each unit is separated in their respective directory.
 - Android Studio
 ```
 
-# Unit 1 - Introduction to Mobile Programming
+## Unit 1 - Introduction to Mobile Programming
 
 The process of developing Mobile application using native or cross-platform tools  
 Market dominated by two major operating systems  
@@ -70,7 +70,7 @@ Software Development Lifecycle (SDLC)
 - Symbian OS (Symbian)
 - HarmonyOS (Huawei)
 
-# Unit 2 - Introduction to Android Programming
+## Unit 2 - Introduction to Android Programming
 
 The process of developing Android application using native tools  
 Android is a Linux based mobile OS maintained by Google (OHA)  
@@ -102,7 +102,7 @@ Android OS was publicly revealed as a beta version on Nov 5, 2007
 The first Android mobile phone was launched in 2008 (HTC Dream)
 ```
 
-# Unit 3 - Designing the UI
+## Unit 3 - Designing the UI
 
 The user interface is the point at which users interact with a website or application  
 The goal of effective UI is to make the user's experience easy and intuitive  
@@ -126,7 +126,7 @@ TableLayout
 AbsoluteLayout
 ```
 
-# Unit 4 - Android Activity
+## Unit 4 - Android Activity
 
 Every instance of an Activity has a lifecycle  
 An activity transitions between three possible states: running, paused and stopped  
@@ -141,7 +141,7 @@ Passing data between activities
 Getting and setting data to/from layout files
 ```
 
-# Unit 5 - UI Fragments, Menus and Dialogs
+## Unit 5 - UI Fragments, Menus and Dialogs
 
 Fragment is a part of an activity, also known as a sub-activity  
 It represents multiple UI inside one main activity  
@@ -156,7 +156,7 @@ Menu and its types
 Alert Dialog
 ```
 
-# Unit 6 - ListView, GridView and RecyclerView
+## Unit 6 - ListView, GridView and RecyclerView
 
 ListView is a view that groups several items and displays them in a vertical list  
 GridView shows list of items in two dimensional scrolling grid  
@@ -170,7 +170,7 @@ GridView (Features and Practical)
 RecyclerView (Features and Practical)
 ```
 
-# Unit 7 - Advanced Android Concepts
+## Unit 7 - Advanced Android Concepts
 
 SQLite is an open-source relational database  
 It supports all database features despite it's size  
