@@ -1,11 +1,18 @@
-<TextView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/spinnerItemText"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/spinnerItemRoot"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:foreground="@drawable/dark_ripple"
     android:paddingHorizontal="20dp"
-    android:paddingVertical="15dp"
-    android:text="@string/na"
-    android:textAlignment="textStart"
-    android:textColor="@color/dark_teal"
-    android:textSize="20sp"
-    android:textStyle="bold|italic" />
+    android:paddingVertical="15dp">
+
+    <TextView
+        android:id="@+id/spinnerItemText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/na"
+        android:textAlignment="textStart"
+        android:textColor="@color/dark_teal"
+        android:textSize="20sp"
+        android:textStyle="bold|italic" />
+</LinearLayout>
