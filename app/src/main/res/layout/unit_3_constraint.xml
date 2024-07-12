@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/constraintRoot"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/light_teal"
     android:paddingHorizontal="25dp"
     android:scrollbarStyle="outsideOverlay"
-    android:scrollbarThumbVertical="@color/transparent_dark_teal">
+    android:scrollbarThumbVertical="@color/transparent_dark_teal"
+    tools:context=".unit_4.Home">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintRootLayout"
@@ -64,6 +66,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/dark_teal"
+                android:stateListAnimator="@null"
                 android:text="@string/about"
                 android:textColor="@color/white" />
 
@@ -76,6 +79,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/gray"
+                android:stateListAnimator="@null"
                 android:text="@string/reset"
                 android:textColor="@color/white" />
 
@@ -88,6 +92,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/darker_purple"
+                android:stateListAnimator="@null"
                 android:text="@string/dialog"
                 android:textColor="@color/white" />
         </LinearLayout>
@@ -108,6 +113,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/blue"
+                android:stateListAnimator="@null"
                 android:text="@string/activity"
                 android:textColor="@color/white" />
 
@@ -120,6 +126,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/reddish"
+                android:stateListAnimator="@null"
                 android:text="@string/result"
                 android:textColor="@color/white" />
         </LinearLayout>
@@ -283,19 +290,50 @@
             android:id="@+id/constraintFooterButtonContainer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="40dp"
             android:gravity="center"
             android:orientation="horizontal"
+            android:weightSum="1"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@id/constraintHeadphoneImage">
 
             <Button
                 android:id="@+id/constraintFragmentButton"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_weight="0.4"
                 android:backgroundTint="@color/light_purple"
+                android:stateListAnimator="@null"
                 android:text="@string/images"
+                android:textColor="@color/black" />
+
+            <Space
+                android:layout_width="10dp"
+                android:layout_height="match_parent" />
+
+            <Button
+                android:id="@+id/constraintDashButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.15"
+                android:backgroundTint="@color/dark_gray"
+                android:stateListAnimator="@null"
+                android:text="@string/star_emoji"
+                android:textColor="@color/white" />
+
+            <Space
+                android:layout_width="10dp"
+                android:layout_height="match_parent" />
+
+            <Button
+                android:id="@+id/constraintSwitchButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.4"
+                android:backgroundTint="@color/light_orange"
+                android:stateListAnimator="@null"
+                android:text="@string/switcher"
                 android:textColor="@color/black" />
         </LinearLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>

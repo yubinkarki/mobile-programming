@@ -25,7 +25,19 @@
             android:textColor="@color/white" />
 
         <Space
-            android:layout_width="15dp"
+            android:layout_width="2dp"
+            android:layout_height="match_parent" />
+
+        <Button
+            android:id="@+id/fragmentSwitchCrossButton"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/darker_purple"
+            android:text="@string/cross"
+            android:textColor="@color/white" />
+
+        <Space
+            android:layout_width="2dp"
             android:layout_height="match_parent" />
 
         <Button
@@ -42,5 +54,6 @@
         android:name="com.bca.mobile_programming.unit_5.FallbackFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="20dp" />
+        android:layout_marginTop="20dp"
+        tools:layout="@layout/unit_5_fallback_fragment" />
 </LinearLayout>
