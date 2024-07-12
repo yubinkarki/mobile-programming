@@ -31,5 +31,7 @@
         <activity android:name=".unit_5.ImagesFragmentActivity" />
 
         <activity android:name=".unit_5.FragmentSwitchActivity" />
+
+        <activity android:name=".unit_6.ListViewMain" />
     </application>
 </manifest>
