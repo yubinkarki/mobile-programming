@@ -4,6 +4,7 @@
     <string name="cross">X</string>
     <string name="yes">Yes</string>
     <string name="hyphen">-</string>
+    <string name="equals">=</string>
     <string name="empty">""</string>
     <string name="open">Open</string>
     <string name="male">Male</string>
@@ -69,6 +70,13 @@
     <string name="alert_message">Do you want to be successful in life?</string>
 
     <string name="star_emoji">⭐️</string>
+    <string name="rocket_emoji">🚀</string>
+    <string name="calculate_sum">Calculate Sum</string>
+    <string name="enter_first_number">Enter first number</string>
+    <string name="enter_second_number">Enter second number</string>
+    <string name="calculate">Calculate</string>
+    <string name="zero">0</string>
+    <string name="list_view">List View</string>
 
     <string-array name="country_list">
         <item>Nepal</item>
@@ -86,5 +94,37 @@
         <item>Jupiter</item>
         <item>Saturn</item>
         <item>Uranus</item>
+    </string-array>
+
+    <string-array name="pokemon_list">
+        <item>Bulbasaur</item>
+        <item>Cyndaquil</item>
+        <item>Mudkip</item>
+        <item>Turtwig</item>
+        <item>Snivy</item>
+        <item>Froakie</item>
+        <item>Litten</item>
+        <item>Scorbunny</item>
+        <item>Eevee</item>
+        <item>Vaporeon</item>
+        <item>Jolteon</item>
+        <item>Flareon</item>
+        <item>Snorlax</item>
+        <item>Lucario</item>
+        <item>Mimikyu</item>
+        <item>Gengar</item>
+        <item>Mawile</item>
+        <item>Absol</item>
+        <item>Dragonite</item>
+        <item>Tyranitar</item>
+        <item>Salamence</item>
+        <item>Metagross</item>
+        <item>Garchomp</item>
+        <item>Sylveon</item>
+        <item>Umbreon</item>
+        <item>Zoroark</item>
+        <item>Greninja</item>
+        <item>Blaziken</item>
+        <item>Infernape</item>
     </string-array>
 </resources>

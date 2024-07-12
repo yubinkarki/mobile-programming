@@ -25,5 +25,6 @@
     <color name="light_purple">#FFF2AEF3</color>
     <color name="light_orange">#FFF1B569</color>
     <color name="darker_purple">#FF3700B3</color>
+    <color name="translucent_gray">#0D1A1B1B</color>
     <color name="transparent_dark_teal">#44018786</color>
 </resources>
