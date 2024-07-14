@@ -10,7 +10,7 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Mobile_programming"
+        android:theme="@style/Theme.Mobile_Programming.Starting"
         tools:targetApi="34">
         <activity
             android:name=".unit_4.Home"
@@ -33,5 +33,13 @@
         <activity android:name=".unit_5.FragmentSwitchActivity" />
 
         <activity android:name=".unit_6.ListViewMain" />
+
+        <activity android:name=".unit_6.CustomListViewMain" />
+
+        <activity android:name=".unit_6.GridViewMain" />
+
+        <activity android:name=".unit_6.CustomGridViewMain" />
+
+        <activity android:name=".unit_6.RecyclerViewListMain" />
     </application>
 </manifest>
