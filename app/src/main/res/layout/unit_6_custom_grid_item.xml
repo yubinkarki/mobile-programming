@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/customGridItemRoot"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:foreground="@drawable/dark_ripple"
+    android:paddingVertical="20dp">
+
+    <ImageView
+        android:id="@+id/customGridItemImage"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_centerHorizontal="true"
+        android:contentDescription="@string/yk_logo"
+        android:src="@drawable/yk_logo" />
+
+    <TextView
+        android:id="@+id/customGridItemTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:layout_below="@id/customGridItemImage"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="@string/list_item_title"
+        android:textColor="@color/black"
+        android:textSize="22sp" />
+
+    <TextView
+        android:id="@+id/customGridItemDescription"
+        android:layout_marginTop="8dp"
+        android:layout_width="wrap_content"
+        android:maxLines="3"
+        android:ellipsize="end"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/customGridItemTitle"
+        android:layout_centerHorizontal="true"
+        android:text="@string/list_item_description"
+        android:textColor="@color/gray"
+        android:textSize="18sp" />
+</RelativeLayout>
