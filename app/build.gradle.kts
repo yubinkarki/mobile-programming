@@ -37,8 +37,11 @@ android {
 }
 
 dependencies {
-    implementation(libs.appcompat)
+    implementation(libs.splash)
     implementation(libs.material)
+    implementation(libs.appcompat)
+    implementation(libs.recyclerview)
+
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
