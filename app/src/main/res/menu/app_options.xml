@@ -2,14 +2,20 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
-        android:id="@+id/appOptionsServices"
-        android:title="@string/services" />
-    <item
         android:id="@+id/appOptionsListView"
         android:title="@string/list_view" />
     <item
-        android:id="@+id/appOptionsTheme"
-        android:title="@string/theme" />
+        android:id="@+id/appOptionsCustomListView"
+        android:title="@string/custom_list_view" />
+    <item
+        android:id="@+id/appOptionsGridView"
+        android:title="@string/grid_view" />
+    <item
+        android:id="@+id/appOptionsCustomGridView"
+        android:title="@string/custom_grid_view" />
+    <item
+        android:id="@+id/appOptionsRecyclerViewList"
+        android:title="@string/recycler_view_list" />
     <item
         android:id="@+id/appOptionsLogout"
         android:title="@string/logout"
