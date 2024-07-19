@@ -22,24 +22,40 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".unit_4.About" />
+        <activity
+            android:name=".unit_4.About"
+            android:theme="@style/Theme.Mobile_Programming.Base" />
 
         <activity
             android:name=".unit_4.Contact"
             android:theme="@style/ActivityAsDialog" />
 
-        <activity android:name=".unit_5.ImagesFragmentActivity" />
+        <activity
+            android:name=".unit_5.ImagesFragmentActivity"
+            android:theme="@style/Theme.Mobile_Programming.Base" />
 
-        <activity android:name=".unit_5.FragmentSwitchActivity" />
+        <activity
+            android:name=".unit_5.FragmentSwitchActivity"
+            android:theme="@style/Theme.Mobile_Programming.Base" />
 
-        <activity android:name=".unit_6.ListViewMain" />
+        <activity
+            android:name=".unit_6.ListViewMain"
+            android:theme="@style/Theme.Mobile_Programming.Base" />
 
-        <activity android:name=".unit_6.CustomListViewMain" />
+        <activity
+            android:name=".unit_6.CustomListViewMain"
+            android:theme="@style/Theme.Mobile_Programming.Base" />
 
-        <activity android:name=".unit_6.GridViewMain" />
+        <activity
+            android:name=".unit_6.GridViewMain"
+            android:theme="@style/Theme.Mobile_Programming.Base" />
 
-        <activity android:name=".unit_6.CustomGridViewMain" />
+        <activity
+            android:name=".unit_6.CustomGridViewMain"
+            android:theme="@style/Theme.Mobile_Programming.Base" />
 
-        <activity android:name=".unit_6.RecyclerViewListMain" />
+        <activity
+            android:name=".unit_6.RecyclerViewListMain"
+            android:theme="@style/Theme.Mobile_Programming.Base" />
     </application>
 </manifest>
