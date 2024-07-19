@@ -16,6 +16,7 @@
     <color name="light_blue">#FF8BCEEC</color>
     <color name="light_gray">#FFCFCFD0</color>
     <color name="light_teal">#FFF6FFFC</color>
+    <color name="darker_teal">#FF012827</color>
     <color name="light_green">#FF88E029</color>
     <color name="dark_purple">#FF6200EE</color>
     <color name="transparent">#00FFFFFF</color>

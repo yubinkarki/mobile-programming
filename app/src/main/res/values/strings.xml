@@ -1,6 +1,7 @@
 <resources>
     <string name="no">No</string>
     <string name="na">N/A</string>
+    <string name="zero">0</string>
     <string name="cross">X</string>
     <string name="yes">Yes</string>
     <string name="hyphen">-</string>
@@ -41,9 +42,12 @@
     <string name="kyc_form">KYC Form</string>
     <string name="football">Football</string>
     <string name="test_three">Test 3</string>
+    <string name="list_view">List View</string>
+    <string name="calculate">Calculate</string>
     <string name="show_less">Show Less</string>
     <string name="anonymous">Anonymous</string>
     <string name="badminton">Badminton</string>
+    <string name="grid_view">Grid View</string>
     <string name="third_row">Third Row</string>
     <string name="first_row">First Row</string>
     <string name="full_name">Full Name:</string>
@@ -56,27 +60,30 @@
     <string name="fragment_two">Fragment Two</string>
     <string name="name_hint">Enter your name</string>
     <string name="welcome_back">Welcome Back</string>
+    <string name="calculate_sum">Calculate Sum</string>
     <string name="happy_dashain">Happy Dashain</string>
+    <string name="list_item_title">This is Title</string>
     <string name="not_interested">Not Interested</string>
     <string name="page_not_found">Page not found</string>
     <string name="headphone_image">Pink Headphone</string>
     <string name="select_gender">Select your gender</string>
+    <string name="custom_grid_view">Custom Grid View</string>
+    <string name="custom_list_view">Custom List View</string>
     <string name="choose_country">Choose your country</string>
     <string name="full_name_hint">Enter your full name</string>
     <string name="positive">You pressed positive button</string>
     <string name="negative">You pressed negative button</string>
+    <string name="recycler_view_list">Recycler View List</string>
+    <string name="enter_first_number">Enter first number</string>
+    <string name="enter_second_number">Enter second number</string>
     <string name="profile_icon_button">Profile icon button</string>
     <string name="sports_question">Which sports do you like?</string>
     <string name="alert_message">Do you want to be successful in life?</string>
+    <string name="list_item_description">This is description of the list item.</string>
 
     <string name="star_emoji">⭐️</string>
     <string name="rocket_emoji">🚀</string>
-    <string name="calculate_sum">Calculate Sum</string>
-    <string name="enter_first_number">Enter first number</string>
-    <string name="enter_second_number">Enter second number</string>
-    <string name="calculate">Calculate</string>
-    <string name="zero">0</string>
-    <string name="list_view">List View</string>
+    <string name="choose_pokemon">Choose Your Pokemon</string>
 
     <string-array name="country_list">
         <item>Nepal</item>
@@ -97,34 +104,64 @@
     </string-array>
 
     <string-array name="pokemon_list">
-        <item>Bulbasaur</item>
-        <item>Cyndaquil</item>
-        <item>Mudkip</item>
-        <item>Turtwig</item>
+        <item>Absol</item>
         <item>Snivy</item>
-        <item>Froakie</item>
-        <item>Litten</item>
-        <item>Scorbunny</item>
         <item>Eevee</item>
-        <item>Vaporeon</item>
+        <item>Gengar</item>
+        <item>Mudkip</item>
+        <item>Litten</item>
+        <item>Mawile</item>
+        <item>Froakie</item>
         <item>Jolteon</item>
         <item>Flareon</item>
         <item>Snorlax</item>
         <item>Lucario</item>
         <item>Mimikyu</item>
-        <item>Gengar</item>
-        <item>Mawile</item>
-        <item>Absol</item>
+        <item>Turtwig</item>
+        <item>Vaporeon</item>
+        <item>Cyndaquil</item>
+        <item>Bulbasaur</item>
+        <item>Scorbunny</item>
         <item>Dragonite</item>
         <item>Tyranitar</item>
-        <item>Salamence</item>
-        <item>Metagross</item>
-        <item>Garchomp</item>
-        <item>Sylveon</item>
-        <item>Umbreon</item>
-        <item>Zoroark</item>
-        <item>Greninja</item>
-        <item>Blaziken</item>
-        <item>Infernape</item>
     </string-array>
+
+    <string-array name="custom_title_list">
+        <item>Bulbasaur</item>
+        <item>Charmander</item>
+        <item>Squirtle</item>
+        <item>Pikachu</item>
+        <item>Eevee</item>
+        <item>Mewtwo</item>
+        <item>Gengar</item>
+        <item>Dragonite</item>
+        <item>Alakazam</item>
+        <item>Arcanine</item>
+    </string-array>
+
+    <string-array name="custom_description_list">
+        <item>Seed Pokemon, starter from Kanto</item>
+        <item>Fire lizard Pokemon, starter from Kanto</item>
+        <item>Tiny Turtle Pokemon, starter from Kanto</item>
+        <item>Electric mouse Pokemon, mascot of the franchise</item>
+        <item>Evolution Pokemon with many possible evolutions</item>
+        <item>Legendary Psychic Pokemon from Kanto. This is known to be one of the most powerful creature in the history.</item>
+        <item>Shadow Pokemon and final form of Gastly</item>
+        <item>Powerful Dragon Pokemon and final form of Dratini</item>
+        <item>Psychic Pokemon with high Special Attack stats</item>
+        <item>Mysterious Psychic Pokemon with high Special Defense</item>
+    </string-array>
+
+    <integer-array name="custom_image_list">
+        <item>@drawable/pokemon_bulbasur</item>
+        <item>@drawable/pokemon_charmander</item>
+        <item>@drawable/pokemon_squirtle</item>
+        <item>@drawable/pokemon_pikachu</item>
+        <item>@drawable/pokemon_eeve</item>
+        <item>@drawable/pokemon_mewtwo</item>
+        <item>@drawable/pokemon_gengar</item>
+        <item>@drawable/pokemon_dragonite</item>
+        <item>@drawable/pokemon_alakazam</item>
+        <item>@drawable/pokemon_arcanine</item>
+    </integer-array>
 </resources>
