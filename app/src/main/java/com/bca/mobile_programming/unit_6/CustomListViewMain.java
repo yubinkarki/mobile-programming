@@ -36,7 +36,7 @@ public class CustomListViewMain extends AppCompatActivity {
 
         String[] titleList = res.getStringArray(R.array.custom_title_list);
         String[] descriptionList = res.getStringArray(R.array.custom_description_list);
-        int[] imageList = {R.drawable.yk_logo, R.drawable.yk_logo, R.drawable.profile, R.drawable.headphone, R.drawable.yk_logo, R.drawable.yk_logo, R.drawable.headphone, R.drawable.profile, R.drawable.profile, R.drawable.yk_logo};
+        int[] imageList = {R.drawable.pokemon_bulbasur, R.drawable.pokemon_charmander, R.drawable.pokemon_squirtle, R.drawable.pokemon_pikachu, R.drawable.pokemon_eeve, R.drawable.pokemon_mewtwo, R.drawable.pokemon_gengar, R.drawable.pokemon_dragonite, R.drawable.pokemon_alakazam, R.drawable.pokemon_arcanine};
 
         CustomListItem customAdapter = new CustomListItem(this, titleList, descriptionList, imageList);
 

@@ -28,26 +28,33 @@ public class CustomListItem extends ArrayAdapter<String> {
 
     @NonNull
     @Override
-    public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
+    public View getView(int position, @Nullable View listItem, @NonNull ViewGroup parent) {
         ListItemHolder holder;
 
-        if (convertView == null) {
+        if (listItem == null) {
             LayoutInflater inflater = ctx.getLayoutInflater();
-            convertView = inflater.inflate(R.layout.unit_6_custom_list_item, parent, false);
 
+            // Inflate the layout
+            listItem = inflater.inflate(R.layout.unit_6_custom_list_item, parent, false);
+
+            // Creating a new ViewHolder
             holder = new ListItemHolder();
-            holder.title = convertView.findViewById(R.id.customListItemTitle);
-            holder.image = convertView.findViewById(R.id.customListItemImage);
-            holder.description = convertView.findViewById(R.id.customListItemDescription);
 
-            convertView.setTag(holder);
-        } else holder = (ListItemHolder) convertView.getTag();
+            // Find individual views and store in the ViewHolder
+            holder.title = listItem.findViewById(R.id.customListItemTitle);
+            holder.image = listItem.findViewById(R.id.customListItemImage);
+            holder.description = listItem.findViewById(R.id.customListItemDescription);
 
+            // Store the ViewHolder within the view
+            listItem.setTag(holder);
+        } else holder = (ListItemHolder) listItem.getTag();
+
+        // Set relevant data to the widgets
         holder.title.setText(title[position]);
         holder.image.setImageResource(image[position]);
         holder.description.setText(description[position]);
 
-        return convertView;
+        return listItem;
     }
 }
 
