@@ -1,13 +1,13 @@
 package com.bca.mobile_programming.unit_1;
 
-public class AlbumDetails {
+public class AlbumDetail {
     private final int image;
     private final String title;
     private final String description;
 
-    public AlbumDetails(String n, String d, int i) {
+    public AlbumDetail(String t, String d, int i) {
         this.image = i;
-        this.title = n;
+        this.title = t;
         this.description = d;
     }
 
