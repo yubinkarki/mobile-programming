@@ -10,11 +10,11 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
 import android.os.Handler;
-import android.widget.Toast;
 import android.app.Activity;
 import android.view.MenuItem;
 import android.view.KeyEvent;
 import android.widget.Button;
+import android.view.ViewGroup;
 import android.content.Intent;
 import android.text.Spannable;
 import android.widget.Spinner;
@@ -25,6 +25,7 @@ import android.widget.TextView;
 import android.widget.PopupMenu;
 import android.view.ContextMenu;
 import android.widget.RadioGroup;
+import android.view.LayoutInflater;
 import android.widget.ArrayAdapter;
 import android.text.SpannableString;
 import android.content.res.Resources;
@@ -36,20 +37,30 @@ import android.graphics.drawable.ColorDrawable;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.core.content.ContextCompat;
+import androidx.core.splashscreen.SplashScreen;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
 
 import com.bca.mobile_programming.R;
+import com.bca.mobile_programming.unit_1.AlertUtil;
 import com.bca.mobile_programming.unit_1.GeneralUtil;
 import com.bca.mobile_programming.unit_1.KeyboardUtil;
+import com.bca.mobile_programming.unit_6.GridViewMain;
+import com.bca.mobile_programming.unit_6.ListViewMain;
+import com.bca.mobile_programming.unit_6.CustomGridViewMain;
+import com.bca.mobile_programming.unit_6.CustomListViewMain;
+import com.bca.mobile_programming.unit_6.RecyclerViewListMain;
 import com.bca.mobile_programming.unit_5.FragmentSwitchActivity;
 import com.bca.mobile_programming.unit_5.ImagesFragmentActivity;
 
 public class Home extends AppCompatActivity {
+    private boolean keepSplash = true;
+
     private Resources res;
-    private View rootLayout;
+    private Handler handler;
     private Button dashButton;
+    private ViewGroup rootLayout;
     private TextView headingText;
     private EditText fullNameInput;
     private KeyboardUtil keyboardUtil;
@@ -59,11 +70,11 @@ public class Home extends AppCompatActivity {
     protected void onStart() {
         super.onStart();
 
+        ActionBar bar = getSupportActionBar();
         keyboardUtil = new KeyboardUtil(this);
         getWindow().setStatusBarColor(ContextCompat.getColor(this, R.color.lighter_blue));
 
-        if (getSupportActionBar() != null) {
-            ActionBar bar = getSupportActionBar();
+        if (bar != null) {
             int color = ContextCompat.getColor(this, R.color.lighter_blue);
             int textColor = ContextCompat.getColor(this, R.color.dark_gray);
             Spannable text = new SpannableString(res.getString(R.string.happy_dashain));
@@ -80,6 +91,12 @@ public class Home extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle b) {
+        SplashScreen splash = SplashScreen.installSplashScreen(this);
+        splash.setKeepOnScreenCondition(() -> keepSplash);
+
+        handler = new Handler(Looper.getMainLooper());
+        handler.postDelayed(() -> keepSplash = false, 800);
+
         super.onCreate(b);
         setContentView(R.layout.unit_3_constraint);
 
@@ -96,11 +113,7 @@ public class Home extends AppCompatActivity {
             }
         });
 
-        String noText = res.getString(R.string.no);
-        String yesText = res.getString(R.string.yes);
         String heading = res.getString(R.string.kyc_form);
-        String alertTitle = res.getString(R.string.alert_title);
-        String alertMessage = res.getString(R.string.alert_message);
         String[] planetList = res.getStringArray(R.array.planet_list);
 
         rootLayout = findViewById(R.id.constraintRoot);
@@ -121,9 +134,7 @@ public class Home extends AppCompatActivity {
         CheckBox basketballCheckbox = findViewById(R.id.constraintCheckboxBasketball);
         CheckBox volleyballCheckbox = findViewById(R.id.constraintCheckboxVolleyball);
 
-        AlertDialog.Builder alertBuilder = new AlertDialog.Builder(this);
-
-        ArrayAdapter<String> countryAdapter = new ArrayAdapter<>(this, R.layout.unit_3_spinner_item, planetList);
+        ArrayAdapter<String> countryAdapter = new ArrayAdapter<>(this, R.layout.unit_3_spinner_item, R.id.spinnerItemText, planetList);
         countrySpinner.setAdapter(countryAdapter);
 
         resetButton.setOnClickListener(v -> {
@@ -136,7 +147,6 @@ public class Home extends AppCompatActivity {
         aboutButton.setOnClickListener(v -> {
             Intent i = new Intent(Home.this, About.class);
             boolean keyboard = keyboardUtil.isKeyboardVisible;
-            Handler handler = new Handler(Looper.getMainLooper());
 
             i.putExtra("gender", "Male");
             i.putExtra("country", "Nepal");
@@ -154,7 +164,6 @@ public class Home extends AppCompatActivity {
             boolean keyboard = keyboardUtil.isKeyboardVisible;
             ArrayList<String> selectedSports = new ArrayList<>();
             String fullName = fullNameInput.getText().toString();
-            Handler handler = new Handler(Looper.getMainLooper());
             int checkedRadioButtonId = genderGroup.getCheckedRadioButtonId();
             String selectedCountry = countrySpinner.getSelectedItem().toString();
             AtomicReference<String> selectedGender = new AtomicReference<>("Unknown");
@@ -183,7 +192,6 @@ public class Home extends AppCompatActivity {
         activityDialogButton.setOnClickListener(v -> {
             Intent i = new Intent(Home.this, Contact.class);
             boolean keyboard = keyboardUtil.isKeyboardVisible;
-            Handler handler = new Handler(Looper.getMainLooper());
 
             if (keyboard) {
                 keyboardUtil.hideKeyboard(v);
@@ -193,32 +201,18 @@ public class Home extends AppCompatActivity {
         });
 
         dialogButton.setOnClickListener(v -> {
-            String positive = res.getString(R.string.positive);
-            String negative = res.getString(R.string.negative);
-            String closeMessage = res.getString(R.string.dismiss);
-
-            alertBuilder.setTitle(alertTitle).setMessage(alertMessage).setCancelable(false);
-
-            alertBuilder.setPositiveButton(yesText, (dialog, which) -> {
-                dialog.cancel();
-                GeneralUtil.showMySnack(rootLayout, positive, closeMessage);
-            });
-
-            alertBuilder.setNegativeButton(noText, (dialog, which) -> {
-                dialog.cancel();
-                GeneralUtil.showMySnack(rootLayout, negative, closeMessage);
-            });
-
-            AlertDialog alert = alertBuilder.create();
-            alert.show();
+            AlertUtil alert = new AlertUtil(this, rootLayout);
+            alert.show(getSupportFragmentManager(), "alert");
         });
 
         fullNameInput.setOnKeyListener((v, keyCode, event) -> {
             if (keyCode == KeyEvent.KEYCODE_ENTER) {
+                fullNameInput.clearFocus();
                 keyboardUtil.hideKeyboard(v);
                 fullNameInput.setFocusable(false);
                 fullNameInput.setFocusableInTouchMode(true);
-                fullNameInput.setText(fullNameInput.getText().toString());
+                headingText.setText(fullNameInput.getText().toString());
+                fullNameInput.setText("");
                 return true;
             } else return false;
         });
@@ -234,7 +228,36 @@ public class Home extends AppCompatActivity {
         });
 
         switchButton.setOnLongClickListener(v -> {
-            Toast.makeText(getApplicationContext(), "Long Press", Toast.LENGTH_SHORT).show();
+            LayoutInflater inflater = getLayoutInflater();
+            View calculatorView = inflater.inflate(R.layout.unit_5_add_calculator, null);
+
+            TextView resultText = calculatorView.findViewById(R.id.addCalculatorResultValue);
+            EditText firstNumber = calculatorView.findViewById(R.id.addCalculatorFirstNumberInput);
+            Button calculateButton = calculatorView.findViewById(R.id.addCalculatorCalculateButton);
+            EditText secondNumber = calculatorView.findViewById(R.id.addCalculatorSecondNumberInput);
+
+            calculateButton.setOnClickListener(c -> {
+                int first, second, result;
+
+                String firstValue = firstNumber.getText().toString();
+                String secondValue = secondNumber.getText().toString();
+
+                if (firstValue.isEmpty()) first = 0;
+                else first = Integer.parseInt(firstValue);
+
+                if (secondValue.isEmpty()) second = 0;
+                else second = Integer.parseInt(secondValue);
+
+                result = first + second;
+                resultText.setText(String.valueOf(result));
+            });
+
+            AlertDialog.Builder builder = new AlertDialog.Builder(this);
+            builder.setCancelable(true);
+            builder.setView(calculatorView);
+            builder.create();
+            builder.show();
+
             return true;
         });
 
@@ -282,14 +305,25 @@ public class Home extends AppCompatActivity {
         String close = "Go Away";
         int selectedItem = item.getItemId();
 
-        if (selectedItem == R.id.appOptionsAbout) {
-            GeneralUtil.showMySnack(rootLayout, "You pressed About. Awesome!", close);
+        if (selectedItem == R.id.appOptionsListView) {
+            Intent i = new Intent(Home.this, ListViewMain.class);
+            startActivity(i);
             return true;
-        } else if (selectedItem == R.id.appOptionsServices) {
-            GeneralUtil.showMySnack(rootLayout, "You pressed Services. Great!", close);
+        } else if (selectedItem == R.id.appOptionsCustomListView) {
+            Intent i = new Intent(Home.this, CustomListViewMain.class);
+            startActivity(i);
             return true;
-        } else if (selectedItem == R.id.appOptionsTheme) {
-            GeneralUtil.showMySnack(rootLayout, "You pressed Theme. Sugoi!", close);
+        } else if (selectedItem == R.id.appOptionsGridView) {
+            Intent i = new Intent(Home.this, GridViewMain.class);
+            startActivity(i);
+            return true;
+        } else if (selectedItem == R.id.appOptionsCustomGridView) {
+            Intent i = new Intent(Home.this, CustomGridViewMain.class);
+            startActivity(i);
+            return true;
+        } else if (selectedItem == R.id.appOptionsRecyclerViewList) {
+            Intent i = new Intent(Home.this, RecyclerViewListMain.class);
+            startActivity(i);
             return true;
         } else if (selectedItem == R.id.appOptionsLogout) {
             GeneralUtil.showMySnack(rootLayout, "You pressed Logout. Naniii!", close);
@@ -335,5 +369,6 @@ public class Home extends AppCompatActivity {
         super.onDestroy();
         Log.d("myStateLog", "Home - onDestroy");
         if (keyboardUtil != null) keyboardUtil.removeListener();
+        handler.removeCallbacksAndMessages(null);
     }
 }
