@@ -6,14 +6,29 @@
     android:background="@color/light_teal"
     android:orientation="vertical">
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:paddingBottom="15dp"
+        android:text="@string/choose_pokemon"
+        android:textAlignment="center"
+        android:textColor="@color/dark_gray"
+        android:textSize="24sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="@color/translucent_gray" />
+
     <GridView
         android:id="@+id/gridViewMainList"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:clipToPadding="false"
+        android:horizontalSpacing="20dp"
         android:numColumns="2"
         android:paddingHorizontal="15dp"
-        android:horizontalSpacing="20dp"
         android:paddingVertical="40dp"
-        android:verticalSpacing="30dp" />
+        android:verticalSpacing="10dp" />
 </LinearLayout>

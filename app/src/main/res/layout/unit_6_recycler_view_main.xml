@@ -3,7 +3,23 @@
     android:id="@+id/recyclerViewListMainRoot"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/light_teal">
+    android:background="@color/light_teal"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:paddingBottom="15dp"
+        android:text="@string/choose_pokemon"
+        android:textAlignment="center"
+        android:textColor="@color/dark_gray"
+        android:textSize="24sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="@color/translucent_gray" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerViewListMainList"

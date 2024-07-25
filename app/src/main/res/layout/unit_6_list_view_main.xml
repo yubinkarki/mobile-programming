@@ -6,6 +6,21 @@
     android:background="@color/light_teal"
     android:orientation="vertical">
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:paddingBottom="15dp"
+        android:text="@string/choose_pokemon"
+        android:textAlignment="center"
+        android:textColor="@color/dark_gray"
+        android:textSize="24sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="@color/translucent_gray" />
+
     <ListView
         android:id="@+id/listViewMainList"
         android:layout_width="match_parent"
@@ -14,7 +29,9 @@
         android:divider="@color/transparent_dark_teal"
         android:dividerHeight="1dp"
         android:footerDividersEnabled="false"
+        android:headerDividersEnabled="false"
         android:overScrollFooter="@color/transparent"
+        android:overScrollHeader="@color/transparent"
         android:paddingTop="40dp"
         android:paddingBottom="80dp"
         android:scrollbarStyle="outsideOverlay"
