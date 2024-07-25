@@ -17,8 +17,6 @@ import com.bca.mobile_programming.R;
 import com.bca.mobile_programming.unit_1.GeneralUtil;
 
 public class ListViewMain extends AppCompatActivity {
-    private Resources res;
-
     @Override
     protected void onStart() {
         super.onStart();
@@ -31,6 +29,8 @@ public class ListViewMain extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle b) {
         super.onCreate(b);
         setContentView(R.layout.unit_6_list_view_main);
+
+        Resources res = getResources();
 
         ListView listView = findViewById(R.id.listViewMainList);
         ViewGroup rootLayout = findViewById(R.id.listViewMainRoot);
@@ -52,11 +52,5 @@ public class ListViewMain extends AppCompatActivity {
                 GeneralUtil.showMySnack(rootLayout, message, close);
             }
         });
-    }
-
-    @Override
-    protected void onResume() {
-        super.onResume();
-        res = getResources();
     }
 }

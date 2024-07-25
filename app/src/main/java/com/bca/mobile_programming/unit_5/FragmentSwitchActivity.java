@@ -41,8 +41,6 @@ public class FragmentSwitchActivity extends FragmentActivity {
             ft.commit();
         });
 
-        fragmentCrossButton.setOnClickListener(v -> {
-            fm.popBackStack();
-        });
+        fragmentCrossButton.setOnClickListener(v -> fm.popBackStack());
     }
 }
