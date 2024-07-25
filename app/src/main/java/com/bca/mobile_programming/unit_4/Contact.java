@@ -6,6 +6,7 @@ import android.view.Window;
 import android.widget.Toast;
 import android.widget.Button;
 import android.content.Intent;
+import android.widget.EditText;
 
 import androidx.activity.OnBackPressedCallback;
 import androidx.appcompat.app.AppCompatActivity;
@@ -15,18 +16,28 @@ import com.bca.mobile_programming.R;
 public class Contact extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle b) {
-        super.onCreate(b);
         supportRequestWindowFeature(Window.FEATURE_NO_TITLE);
-        setContentView(R.layout.unit_2_hello);
 
-        Log.d("myStateLog", "Contact - onCreate");
+        super.onCreate(b);
+        setContentView(R.layout.unit_2_hello);
 
         this.setFinishOnTouchOutside(false);
 
         Button submitButton = findViewById(R.id.helloSubmitButton);
         Button cancelButton = findViewById(R.id.helloCancelButton);
+        EditText fullNameInput = findViewById(R.id.helloFullNameInput);
 
-        submitButton.setOnClickListener(v -> Toast.makeText(getApplicationContext(), "Submitted", Toast.LENGTH_SHORT).show());
+        submitButton.setOnClickListener(v -> {
+            String fullNameValue = fullNameInput.getText().toString();
+
+            if (fullNameValue.isEmpty()) fullNameValue = "No Value";
+
+            Intent i = new Intent();
+            i.putExtra("contactData", fullNameValue);
+            setResult(RESULT_OK, i);
+            Toast.makeText(getApplicationContext(), "Submitted", Toast.LENGTH_SHORT).show();
+            finish();
+        });
 
         cancelButton.setOnClickListener(v -> {
             Intent i = new Intent();
