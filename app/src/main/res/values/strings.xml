@@ -19,8 +19,11 @@
     <string name="submit">Submit</string>
     <string name="images">Images</string>
     <string name="result">Result</string>
+    <string name="insert">Insert</string>
+    <string name="update">Update</string>
     <string name="logout">Logout</string>
     <string name="delete">Delete</string>
+    <string name="select">Select</string>
     <string name="gender">Gender:</string>
     <string name="sports">Sports:</string>
     <string name="go_back">Go Back</string>
@@ -42,6 +45,7 @@
     <string name="kyc_form">KYC Form</string>
     <string name="football">Football</string>
     <string name="test_three">Test 3</string>
+    <string name="enter_id">Enter id</string>
     <string name="list_view">List View</string>
     <string name="calculate">Calculate</string>
     <string name="show_less">Show Less</string>
@@ -60,15 +64,20 @@
     <string name="fragment_two">Fragment Two</string>
     <string name="name_hint">Enter your name</string>
     <string name="welcome_back">Welcome Back</string>
+    <string name="enter_name">Enter your name</string>
     <string name="calculate_sum">Calculate Sum</string>
     <string name="happy_dashain">Happy Dashain</string>
     <string name="list_item_title">This is Title</string>
     <string name="not_interested">Not Interested</string>
     <string name="page_not_found">Page not found</string>
     <string name="headphone_image">Pink Headphone</string>
+    <string name="profile_details">Profile Details</string>
+    <string name="data_from_db">Data from database</string>
+    <string name="enter_address">Enter your address</string>
     <string name="select_gender">Select your gender</string>
     <string name="custom_grid_view">Custom Grid View</string>
     <string name="custom_list_view">Custom List View</string>
+    <string name="choose_pokemon">Choose Your Pokemon</string>
     <string name="choose_country">Choose your country</string>
     <string name="full_name_hint">Enter your full name</string>
     <string name="positive">You pressed positive button</string>
@@ -83,7 +92,6 @@
 
     <string name="star_emoji">⭐️</string>
     <string name="rocket_emoji">🚀</string>
-    <string name="choose_pokemon">Choose Your Pokemon</string>
 
     <string-array name="country_list">
         <item>Nepal</item>

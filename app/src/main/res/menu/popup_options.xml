@@ -5,6 +5,6 @@
         android:id="@+id/popupOptionsServices"
         android:title="@string/services" />
     <item
-        android:id="@+id/popupOptionsAbout"
-        android:title="@string/about" />
+        android:id="@+id/popupOptionsProfile"
+        android:title="@string/profile" />
 </menu>
