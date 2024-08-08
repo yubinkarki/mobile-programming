@@ -40,7 +40,6 @@ dependencies {
     implementation(libs.splash)
     implementation(libs.material)
     implementation(libs.appcompat)
-    implementation(libs.recyclerview)
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
