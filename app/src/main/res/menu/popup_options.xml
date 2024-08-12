@@ -7,4 +7,7 @@
     <item
         android:id="@+id/popupOptionsProfile"
         android:title="@string/profile" />
+    <item
+        android:id="@+id/popupOptionsProfileServer"
+        android:title="@string/profile_server" />
 </menu>

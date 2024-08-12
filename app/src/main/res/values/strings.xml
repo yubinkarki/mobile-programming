@@ -7,6 +7,7 @@
     <string name="hyphen">-</string>
     <string name="equals">=</string>
     <string name="empty">""</string>
+    <string name="num_one">1</string>
     <string name="open">Open</string>
     <string name="male">Male</string>
     <string name="theme">Theme</string>
@@ -67,6 +68,7 @@
     <string name="enter_name">Enter your name</string>
     <string name="calculate_sum">Calculate Sum</string>
     <string name="happy_dashain">Happy Dashain</string>
+    <string name="profile_server">Profile Server</string>
     <string name="list_item_title">This is Title</string>
     <string name="not_interested">Not Interested</string>
     <string name="page_not_found">Page not found</string>
@@ -80,6 +82,7 @@
     <string name="choose_pokemon">Choose Your Pokemon</string>
     <string name="choose_country">Choose your country</string>
     <string name="full_name_hint">Enter your full name</string>
+    <string name="data_from_server">Data from Server\n</string>
     <string name="positive">You pressed positive button</string>
     <string name="negative">You pressed negative button</string>
     <string name="recycler_view_list">Recycler View List</string>
@@ -87,6 +90,7 @@
     <string name="enter_second_number">Enter second number</string>
     <string name="profile_icon_button">Profile icon button</string>
     <string name="sports_question">Which sports do you like?</string>
+    <string name="profile_details_server">Profile Details Server</string>
     <string name="alert_message">Do you want to be successful in life?</string>
     <string name="list_item_description">This is description of the list item.</string>
 
