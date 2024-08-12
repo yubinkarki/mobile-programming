@@ -97,19 +97,6 @@
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/userProfileServerSelectButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:backgroundTint="@color/dark_teal"
-            android:stateListAnimator="@null"
-            android:text="@string/select"
-            android:textColor="@color/white" />
-
-        <Space
-            android:layout_width="4dp"
-            android:layout_height="match_parent" />
-
-        <Button
             android:id="@+id/userProfileServerInsertButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
