@@ -38,6 +38,7 @@ android {
 
 dependencies {
     implementation(libs.splash)
+    implementation(libs.volley)
     implementation(libs.material)
     implementation(libs.appcompat)
 
