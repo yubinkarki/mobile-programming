@@ -48,9 +48,11 @@ import com.bca.mobile_programming.unit_1.GeneralUtil;
 import com.bca.mobile_programming.unit_1.KeyboardUtil;
 import com.bca.mobile_programming.unit_6.GridViewMain;
 import com.bca.mobile_programming.unit_6.ListViewMain;
+import com.bca.mobile_programming.unit_7.UserProfileMain;
 import com.bca.mobile_programming.unit_6.CustomGridViewMain;
 import com.bca.mobile_programming.unit_6.CustomListViewMain;
 import com.bca.mobile_programming.unit_6.RecyclerViewListMain;
+import com.bca.mobile_programming.unit_7.UserProfileServerMain;
 import com.bca.mobile_programming.unit_5.FragmentSwitchActivity;
 import com.bca.mobile_programming.unit_5.ImagesFragmentActivity;
 
@@ -79,8 +81,8 @@ public class Home extends AppCompatActivity {
             int textColor = ContextCompat.getColor(this, R.color.dark_gray);
             Spannable text = new SpannableString(res.getString(R.string.happy_dashain));
 
-            text.setSpan(new ForegroundColorSpan(textColor), 0, text.length(), Spannable.SPAN_INCLUSIVE_INCLUSIVE);
             text.setSpan(new AbsoluteSizeSpan(20, true), 0, text.length(), Spannable.SPAN_INCLUSIVE_INCLUSIVE);
+            text.setSpan(new ForegroundColorSpan(textColor), 0, text.length(), Spannable.SPAN_INCLUSIVE_INCLUSIVE);
             text.setSpan(new LeadingMarginSpan.Standard(20), 0, text.length(), Spannable.SPAN_INCLUSIVE_INCLUSIVE);
 
             bar.setTitle(text);
@@ -269,11 +271,16 @@ public class Home extends AppCompatActivity {
                 String close = "Bye";
                 int selectedItem = item.getItemId();
 
-                if (selectedItem == R.id.popupOptionsAbout) {
-                    GeneralUtil.showMySnack(rootLayout, "Popup about", close);
+                if (selectedItem == R.id.popupOptionsProfile) {
+                    Intent i = new Intent(Home.this, UserProfileMain.class);
+                    startActivity(i);
                     return true;
                 } else if (selectedItem == R.id.popupOptionsServices) {
                     GeneralUtil.showMySnack(rootLayout, "Popup services", close);
+                    return true;
+                } else if (selectedItem == R.id.popupOptionsProfileServer) {
+                    Intent i = new Intent(Home.this, UserProfileServerMain.class);
+                    startActivity(i);
                     return true;
                 }
 
