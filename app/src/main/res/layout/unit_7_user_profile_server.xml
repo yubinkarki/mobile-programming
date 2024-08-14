@@ -104,6 +104,19 @@
             android:stateListAnimator="@null"
             android:text="@string/insert"
             android:textColor="@color/white" />
+
+        <Space
+            android:layout_width="10dp"
+            android:layout_height="match_parent" />
+
+        <Button
+            android:id="@+id/userProfileServerRefreshButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/hard_pink"
+            android:stateListAnimator="@null"
+            android:text="@string/refresh"
+            android:textColor="@color/white" />
     </LinearLayout>
 
     <View
