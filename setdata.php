@@ -1,7 +1,7 @@
 <?php
 $id = $_POST["id"];
 $name = $_POST["name"];
-$location = $_POST["address"];
+$address = $_POST["address"];
 
 // Database connection details.
 $password = "";
@@ -17,7 +17,7 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "INSERT INTO student(id, name, address) VALUES('$id', '$name', '$location')";
+$sql = "INSERT INTO student(id, name, address) VALUES('$id', '$name', '$address')";
 
 $result = $conn->query($sql);
 
