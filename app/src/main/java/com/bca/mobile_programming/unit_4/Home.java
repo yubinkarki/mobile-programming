@@ -45,6 +45,7 @@ import androidx.activity.result.contract.ActivityResultContracts;
 import com.bca.mobile_programming.R;
 import com.bca.mobile_programming.unit_1.AlertUtil;
 import com.bca.mobile_programming.unit_1.GeneralUtil;
+import com.bca.mobile_programming.unit_7.MapViewMain;
 import com.bca.mobile_programming.unit_1.KeyboardUtil;
 import com.bca.mobile_programming.unit_6.GridViewMain;
 import com.bca.mobile_programming.unit_6.ListViewMain;
@@ -280,6 +281,10 @@ public class Home extends AppCompatActivity {
                     return true;
                 } else if (selectedItem == R.id.popupOptionsProfileServer) {
                     Intent i = new Intent(Home.this, UserProfileServerMain.class);
+                    startActivity(i);
+                    return true;
+                } else if (selectedItem == R.id.popupOptionsMap) {
+                    Intent i = new Intent(Home.this, MapViewMain.class);
                     startActivity(i);
                     return true;
                 }

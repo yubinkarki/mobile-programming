@@ -4,6 +4,8 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
     <application
         android:allowBackup="true"
@@ -16,6 +18,11 @@
         android:theme="@style/Theme.Mobile_Programming.Starting"
         android:usesCleartextTraffic="true"
         tools:targetApi="34">
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyBlWPMcbMp3_smL-lrBZEGYuMs7NtyVJ6c" />
+
         <activity
             android:name=".unit_4.Home"
             android:exported="true"
@@ -68,6 +75,10 @@
 
         <activity
             android:name=".unit_7.UserProfileServerMain"
+            android:theme="@style/Theme.Mobile_Programming.Base" />
+
+        <activity
+            android:name=".unit_7.MapViewMain"
             android:theme="@style/Theme.Mobile_Programming.Base" />
     </application>
 </manifest>
