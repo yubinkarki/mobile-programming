@@ -10,4 +10,7 @@
     <item
         android:id="@+id/popupOptionsProfileServer"
         android:title="@string/profile_server" />
+    <item
+        android:id="@+id/popupOptionsMap"
+        android:title="@string/map" />
 </menu>

@@ -4,6 +4,7 @@
     <string name="zero">0</string>
     <string name="cross">X</string>
     <string name="yes">Yes</string>
+    <string name="map">Map</string>
     <string name="hyphen">-</string>
     <string name="equals">=</string>
     <string name="empty">""</string>
@@ -36,6 +37,7 @@
     <string name="test_two">Test 2</string>
     <string name="dismiss">Dismiss</string>
     <string name="details">Details</string>
+    <string name="refresh">Refresh</string>
     <string name="country">Country:</string>
     <string name="app_name">MP 2024</string>
     <string name="test_four">Test 4</string>
@@ -67,6 +69,8 @@
     <string name="welcome_back">Welcome Back</string>
     <string name="enter_name">Enter your name</string>
     <string name="calculate_sum">Calculate Sum</string>
+    <string name="map_description">This is map</string>
+    <string name="map_title">Look at this map!</string>
     <string name="happy_dashain">Happy Dashain</string>
     <string name="profile_server">Profile Server</string>
     <string name="list_item_title">This is Title</string>
@@ -82,7 +86,7 @@
     <string name="choose_pokemon">Choose Your Pokemon</string>
     <string name="choose_country">Choose your country</string>
     <string name="full_name_hint">Enter your full name</string>
-    <string name="data_from_server">Data from Server\n</string>
+    <string name="data_from_server">Data from Server</string>
     <string name="positive">You pressed positive button</string>
     <string name="negative">You pressed negative button</string>
     <string name="recycler_view_list">Recycler View List</string>
