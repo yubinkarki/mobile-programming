@@ -12,20 +12,17 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import com.bca.mobile_programming.R;
+import com.bca.mobile_programming.unit_1.UserInfo;
 
-public class UserListItemAdapter extends ArrayAdapter<String> {
+public class UserListItemAdapter extends ArrayAdapter<UserInfo> {
     Activity ctx;
-    ArrayList<Integer> id;
-    ArrayList<String> name;
-    ArrayList<String> address;
+    ArrayList<UserInfo> userInfo;
 
-    public UserListItemAdapter(Activity context, ArrayList<Integer> id, ArrayList<String> name, ArrayList<String> address) {
-        super(context, R.layout.unit_7_user_list_item, name);
+    public UserListItemAdapter(Activity context, ArrayList<UserInfo> userInfoList) {
+        super(context, R.layout.unit_7_user_list_item, userInfoList);
 
-        this.id = id;
-        this.name = name;
         this.ctx = context;
-        this.address = address;
+        this.userInfo = userInfoList;
     }
 
     @NonNull
@@ -49,9 +46,11 @@ public class UserListItemAdapter extends ArrayAdapter<String> {
             listItem.setTag(holder);
         } else holder = (UserListItemHolder) listItem.getTag();
 
-        holder.nameView.setText(name.get(position));
-        holder.addressView.setText(address.get(position));
-        holder.idView.setText(String.valueOf(id.get(position)));
+        UserInfo currentData = userInfo.get(position);
+
+        holder.nameView.setText(currentData.getName());
+        holder.addressView.setText(currentData.getAddress());
+        holder.idView.setText(String.valueOf(currentData.getId()));
 
         return listItem;
     }

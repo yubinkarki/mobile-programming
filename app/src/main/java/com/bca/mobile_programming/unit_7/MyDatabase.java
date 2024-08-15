@@ -8,10 +8,16 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 import androidx.annotation.NonNull;
 
+import com.bca.mobile_programming.unit_1.UserInfo;
+
 public class MyDatabase extends SQLiteOpenHelper {
     private static final int DATABASE_VERSION = 1;
-    private static final String USER_TABLE = "user";
     private static final String DATABASE_NAME = "mobile_programming";
+
+    private final String COLUMN_ID = "id";
+    private final String USER_TABLE = "user";
+    private final String COLUMN_NAME = "name";
+    private final String COLUMN_ADDRESS = "address";
 
     public MyDatabase(Context ctx) {
         super(ctx, DATABASE_NAME, null, DATABASE_VERSION);
@@ -29,13 +35,13 @@ public class MyDatabase extends SQLiteOpenHelper {
         onCreate(db);
     }
 
-    public void insertData(int id, String name, String address) {
+    public void insertData(UserInfo data) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
 
-        contentValues.put("id", id);
-        contentValues.put("name", name);
-        contentValues.put("address", address);
+        contentValues.put(COLUMN_ID, data.getId());
+        contentValues.put(COLUMN_NAME, data.getName());
+        contentValues.put(COLUMN_ADDRESS, data.getAddress());
 
         db.insert(USER_TABLE, null, contentValues);
         db.close();
@@ -48,19 +54,20 @@ public class MyDatabase extends SQLiteOpenHelper {
         return db.rawQuery(query, null);
     }
 
-    public void updateData(String id, String name, String address) {
+    public void updateData(UserInfo data) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
 
-        contentValues.put("name", name);
-        contentValues.put("address", address);
+        contentValues.put(COLUMN_NAME, data.getName());
+        contentValues.put(COLUMN_ADDRESS, data.getAddress());
 
-        db.update(USER_TABLE, contentValues, "id=?", new String[]{id});
+        db.update(USER_TABLE, contentValues, COLUMN_ID + "=?", new String[]{String.valueOf(data.getId())});
         db.close();
     }
 
     public void deleteData(String id) {
-        SQLiteDatabase db = this.getWritableDatabase();
-        db.delete(USER_TABLE, "id=?", new String[]{id});
+        try (SQLiteDatabase db = this.getWritableDatabase()) {
+            db.delete(USER_TABLE, COLUMN_ID + "=?", new String[]{id});
+        }
     }
 }
