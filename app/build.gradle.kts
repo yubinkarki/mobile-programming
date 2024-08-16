@@ -37,6 +37,7 @@ android {
 }
 
 dependencies {
+    implementation(libs.maps)
     implementation(libs.splash)
     implementation(libs.volley)
     implementation(libs.material)

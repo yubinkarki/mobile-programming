@@ -32,8 +32,8 @@ public class UserProfileServerMain extends AppCompatActivity {
     EditText nameInput;
     EditText addressInput;
 
-    final String getEndpoint = "http://192.168.0.100/getdata.php";
-    final String sendEndpoint = "http://192.168.0.100/setdata.php";
+    final String getEndpoint = "http://192.168.16.42/getdata.php";
+    final String sendEndpoint = "http://192.168.16.42/setdata.php";
 
     @Override
     protected void onStart() {
@@ -65,7 +65,10 @@ public class UserProfileServerMain extends AppCompatActivity {
         RequestQueue queue = Volley.newRequestQueue(this);
 
         StringRequest stringRequest = new StringRequest(Request.Method.GET, getEndpoint,
-                response -> decodeJson(response),
+                response -> {
+                    Log.d("response", response);
+                    decodeJson(response);
+                },
                 error -> Log.d("Error getting data", error.toString())
         );
 

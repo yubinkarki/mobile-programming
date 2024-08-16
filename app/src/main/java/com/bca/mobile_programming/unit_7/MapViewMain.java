@@ -64,7 +64,7 @@ public class MapViewMain extends AppCompatActivity implements OnMapReadyCallback
     @Override
     public void onMapReady(@NonNull GoogleMap map) {
         LatLng coordinates = new LatLng(27.6915, 85.3420);
-        map.addMarker(new MarkerOptions().position(coordinates).title("Kathmandu Sahara"));
+        map.addMarker(new MarkerOptions().position(coordinates).title("Kathmandu Sahar"));
         map.moveCamera(CameraUpdateFactory.newLatLngZoom(coordinates, 10));
     }
 }
