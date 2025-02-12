@@ -30,9 +30,7 @@ public class MapViewMain extends AppCompatActivity implements OnMapReadyCallback
     @Override
     protected void onStart() {
         super.onStart();
-
         ActionBar bar = getSupportActionBar();
-        getWindow().setStatusBarColor(ContextCompat.getColor(this, R.color.lighter_blue));
 
         if (bar != null) {
             int color = ContextCompat.getColor(this, R.color.lighter_blue);

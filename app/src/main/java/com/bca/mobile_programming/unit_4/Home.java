@@ -75,7 +75,6 @@ public class Home extends AppCompatActivity {
 
         ActionBar bar = getSupportActionBar();
         keyboardUtil = new KeyboardUtil(this);
-        getWindow().setStatusBarColor(ContextCompat.getColor(this, R.color.lighter_blue));
 
         if (bar != null) {
             int color = ContextCompat.getColor(this, R.color.lighter_blue);
