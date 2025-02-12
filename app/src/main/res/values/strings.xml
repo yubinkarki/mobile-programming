@@ -81,12 +81,12 @@
     <string name="data_from_db">Data from database</string>
     <string name="enter_address">Enter your address</string>
     <string name="select_gender">Select your gender</string>
+    <string name="data_from_server">Data from Server</string>
     <string name="custom_grid_view">Custom Grid View</string>
     <string name="custom_list_view">Custom List View</string>
     <string name="choose_pokemon">Choose Your Pokemon</string>
     <string name="choose_country">Choose your country</string>
     <string name="full_name_hint">Enter your full name</string>
-    <string name="data_from_server">Data from Server</string>
     <string name="positive">You pressed positive button</string>
     <string name="negative">You pressed negative button</string>
     <string name="recycler_view_list">Recycler View List</string>
