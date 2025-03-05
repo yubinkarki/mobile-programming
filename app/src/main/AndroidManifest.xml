@@ -17,7 +17,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Mobile_Programming.Starting"
         android:usesCleartextTraffic="true"
-        tools:targetApi="34">
+        tools:targetApi="35">
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
@@ -26,6 +26,7 @@
         <activity
             android:name=".unit_4.Home"
             android:exported="true"
+            android:theme="@style/Theme.Mobile_Programming.Base"
             android:windowSoftInputMode="stateAlwaysHidden">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
