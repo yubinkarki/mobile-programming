@@ -1,7 +1,9 @@
 package com.bca.mobile_programming.unit_3;
 
 import android.os.Bundle;
+import android.widget.Toast;
 import android.app.Activity;
+import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.ArrayAdapter;
 
@@ -12,6 +14,12 @@ public class Hello extends Activity {
     public void onCreate(Bundle b) {
         super.onCreate(b);
         setContentView(R.layout.unit_3_constraint);
+
+        Button aboutButton = findViewById(R.id.constraintAboutButton);
+
+        aboutButton.setOnClickListener(view -> {
+            Toast.makeText(this, "Button clicked!", Toast.LENGTH_SHORT).show();
+        });
 
         Spinner countrySpinner = findViewById(R.id.constraintCountrySpinner);
         String[] countryList = {"Korea", "Netherlands", "United Kingdom", "Germany"};

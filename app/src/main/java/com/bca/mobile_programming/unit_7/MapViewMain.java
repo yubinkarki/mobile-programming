@@ -33,7 +33,7 @@ public class MapViewMain extends AppCompatActivity implements OnMapReadyCallback
         ActionBar bar = getSupportActionBar();
 
         if (bar != null) {
-            int color = ContextCompat.getColor(this, R.color.lighter_blue);
+            int color = ContextCompat.getColor(this, R.color.light_teal);
             int textColor = ContextCompat.getColor(this, R.color.dark_gray);
             Spannable text = new SpannableString(res.getString(R.string.map_title));
 

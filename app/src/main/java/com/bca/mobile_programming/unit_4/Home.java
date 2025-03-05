@@ -337,7 +337,7 @@ public class Home extends AppCompatActivity {
             startActivity(i);
             return true;
         } else if (selectedItem == R.id.appOptionsLogout) {
-            GeneralUtil.showMySnack(rootLayout, "You pressed Logout. Naniii!", close);
+            GeneralUtil.showMySnack(rootLayout, "You pressed Logout!", close);
             return true;
         }
 
