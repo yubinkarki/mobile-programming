@@ -2,10 +2,10 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/constraintRoot"
-    android:paddingHorizontal="25dp"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/light_teal"
+    android:paddingHorizontal="25dp"
     android:scrollbarStyle="outsideOverlay"
     android:scrollbarThumbVertical="@color/transparent_dark_teal">
 

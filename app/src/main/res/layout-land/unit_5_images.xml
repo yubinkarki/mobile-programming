@@ -12,19 +12,22 @@
         android:name="com.bca.mobile_programming.unit_5.MyLogoFragment"
         android:layout_width="0dp"
         android:layout_height="match_parent"
-        android:layout_weight="1" />
+        android:layout_weight="1"
+        tools:layout="@layout/unit_5_my_logo" />
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/imagesMiddleContainer"
         android:name="com.bca.mobile_programming.unit_5.NameFragment"
         android:layout_width="0dp"
         android:layout_height="match_parent"
-        android:layout_weight="1" />
+        android:layout_weight="1"
+        tools:layout="@layout/unit_5_name" />
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/imagesBottomContainer"
         android:name="com.bca.mobile_programming.unit_5.HeadphoneFragment"
         android:layout_width="0dp"
         android:layout_height="match_parent"
-        android:layout_weight="1" />
+        android:layout_weight="1"
+        tools:layout="@layout/unit_5_headphone" />
 </LinearLayout>
