@@ -4,12 +4,14 @@
     <string name="zero">0</string>
     <string name="cross">X</string>
     <string name="yes">Yes</string>
+    <string name="faq">FAQ</string>
     <string name="map">Map</string>
     <string name="hyphen">-</string>
     <string name="equals">=</string>
     <string name="empty">""</string>
     <string name="num_one">1</string>
     <string name="open">Open</string>
+    <string name="home">Home</string>
     <string name="male">Male</string>
     <string name="login">Login</string>
     <string name="other">Other</string>
@@ -23,6 +25,7 @@
     <string name="submit">Submit</string>
     <string name="images">Images</string>
     <string name="result">Result</string>
+    <string name="signup">Signup</string>
     <string name="insert">Insert</string>
     <string name="update">Update</string>
     <string name="logout">Logout</string>
@@ -40,6 +43,7 @@
     <string name="test_two">Test 2</string>
     <string name="dismiss">Dismiss</string>
     <string name="details">Details</string>
+    <string name="welcome">Welcome</string>
     <string name="refresh">Refresh</string>
     <string name="country">Country:</string>
     <string name="app_name">MP 2024</string>

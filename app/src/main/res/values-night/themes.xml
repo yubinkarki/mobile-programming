@@ -12,6 +12,7 @@
         <item name="android:windowLightStatusBar">true</item>
         <item name="android:popupMenuStyle">@style/AllMenu</item>
         <item name="actionOverflowMenuStyle">@style/AllMenu</item>
+        <item name="android:navigationBarColor">@color/black</item>
         <item name="android:statusBarColor">@color/light_teal</item>
         <item name="android:itemTextAppearance">@style/MenuText</item>
         <item name="android:contextPopupMenuStyle">@style/AllMenu</item>
