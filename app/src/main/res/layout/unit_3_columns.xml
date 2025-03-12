@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".unit_3.Hello">
+    tools:context=".unit_3.Columns">
 
     <TextView
         android:layout_width="match_parent"
@@ -30,7 +30,7 @@
         android:layout_weight="1"
         android:background="@color/green"
         android:gravity="center"
-        android:textColor="@color/white"
         android:text="@string/third_row"
+        android:textColor="@color/white"
         android:textSize="35sp" />
 </LinearLayout>

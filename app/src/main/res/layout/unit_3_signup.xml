@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/light_teal"
-    android:scrollbarStyle="outsideOverlay">
+    android:scrollbarStyle="outsideOverlay"
+    tools:context=".unit_3.Signup">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -115,6 +117,7 @@
             app:layout_constraintTop_toBottomOf="@id/signupPhoneInput"
             app:layout_constraintWidth_max="450dp" />
 
+
         <TextView
             android:id="@+id/signupGenderLabel"
             android:layout_width="wrap_content"
@@ -164,6 +167,85 @@
                 android:textColor="@color/black" />
         </RadioGroup>
 
+        <TextView
+            android:id="@+id/signupSportsLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:fontFamily="sans-serif-condensed-light"
+            android:text="@string/sports_question"
+            android:textAlignment="textStart"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/signupGenderRadioGroup" />
+
+        <LinearLayout
+            android:id="@+id/signupSportsTopContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@id/signupSportsLabel">
+
+            <CheckBox
+                android:id="@+id/signupCheckboxFootball"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/black"
+                android:buttonTint="@color/blue"
+                android:maxWidth="320dp"
+                android:text="@string/football"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <CheckBox
+                android:id="@+id/signupCheckboxBasketball"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/black"
+                android:buttonTint="@color/blue"
+                android:checked="true"
+                android:text="@string/basketball"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/signupSportsBottomContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@id/signupSportsTopContainer">
+
+            <CheckBox
+                android:id="@+id/signupCheckboxVolleyball"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/black"
+                android:buttonTint="@color/blue"
+                android:text="@string/volleyball"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <CheckBox
+                android:id="@+id/signupCheckboxBadminton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/black"
+                android:buttonTint="@color/blue"
+                android:maxWidth="320dp"
+                android:text="@string/badminton"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+        </LinearLayout>
 
         <TextView
             android:id="@+id/signupCountryLabel"
@@ -175,7 +257,7 @@
             android:textColor="@color/black"
             android:textSize="16sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/signupGenderRadioGroup" />
+            app:layout_constraintTop_toBottomOf="@id/signupSportsBottomContainer" />
 
         <Spinner
             android:id="@+id/signupCountrySpinner"
@@ -223,18 +305,37 @@
             android:id="@+id/signupSubmitButton"
             android:layout_width="0dp"
             android:layout_height="60dp"
+            android:layout_marginStart="50dp"
             android:layout_marginTop="30dp"
             android:backgroundTint="@color/blue"
             android:fontFamily="sans-serif-condensed-medium"
-            android:text="@string/submit"
+            android:text="@string/signup"
             android:textAllCaps="false"
             android:textColor="@color/white"
             android:textSize="20sp"
-            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/signupFaqButton"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/signupTermsLayout"
             app:layout_constraintWidth_max="320dp"
-            app:layout_constraintWidth_percent="0.4" />
+            app:layout_constraintWidth_percent="0.3" />
+
+        <Button
+            android:id="@+id/signupFaqButton"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="50dp"
+            android:backgroundTint="@color/teal"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:text="@string/faq"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/signupSubmitButton"
+            app:layout_constraintTop_toBottomOf="@id/signupTermsLayout"
+            app:layout_constraintWidth_max="320dp"
+            app:layout_constraintWidth_percent="0.3" />
 
         <LinearLayout
             android:id="@+id/signupHaveAccountLayout"
