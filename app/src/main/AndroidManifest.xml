@@ -24,15 +24,26 @@
             android:value="AIzaSyBlWPMcbMp3_smL-lrBZEGYuMs7NtyVJ6c" />
 
         <activity
-            android:name=".unit_4.Home"
+            android:name=".unit_3.Login"
             android:exported="true"
-            android:theme="@style/Theme.Mobile_Programming.Base"
             android:windowSoftInputMode="stateAlwaysHidden">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".unit_2.Hello"
+            android:theme="@style/Theme.Mobile_Programming.Base" />
+
+        <activity
+            android:name=".unit_3.Signup"
+            android:theme="@style/Theme.Mobile_Programming.Base" />
+
+        <activity
+            android:name=".unit_4.Home"
+            android:theme="@style/Theme.Mobile_Programming.Base" />
 
         <activity
             android:name=".unit_4.About"
