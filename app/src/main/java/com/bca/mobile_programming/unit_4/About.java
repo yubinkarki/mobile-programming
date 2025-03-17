@@ -28,6 +28,7 @@ public class About extends Activity {
 
         Intent i = getIntent();
 
+        String email = i.getStringExtra("email");
         String gender = i.getStringExtra("gender");
         String country = i.getStringExtra("country");
         String fullName = i.getStringExtra("fullName");
@@ -44,7 +45,13 @@ public class About extends Activity {
 
         backButton.setOnClickListener(v -> finish());
 
-        dialogButton.setOnClickListener(v -> Toast.makeText(getApplicationContext(), "Dialog", Toast.LENGTH_SHORT).show());
+        dialogButton.setOnClickListener(v -> {
+            if (email != null && !email.isEmpty()) {
+                Toast.makeText(getApplicationContext(), email, Toast.LENGTH_SHORT).show();
+            } else {
+                Toast.makeText(getApplicationContext(), "No email", Toast.LENGTH_SHORT).show();
+            }
+        });
 
         profileIconButton.setOnClickListener(v -> {
             String closeMessage = "Dump";
