@@ -30,16 +30,27 @@
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
+        <ImageView
+            android:id="@+id/homeHeadphoneImage"
+            android:layout_width="wrap_content"
+            android:layout_height="150dp"
+            android:layout_marginTop="30dp"
+            android:contentDescription="@string/headphone_image"
+            android:scaleType="fitCenter"
+            android:src="@drawable/headphone"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/homeHeadingText" />
+
         <LinearLayout
             android:id="@+id/homeButtonContainer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="40dp"
             android:gravity="center"
             android:orientation="horizontal"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/homeHeadingText">
+            app:layout_constraintTop_toBottomOf="@id/homeHeadphoneImage">
 
             <Button
                 android:id="@+id/homeActivityButton"
@@ -64,17 +75,6 @@
                 android:textColor="@color/white" />
         </LinearLayout>
 
-        <ImageView
-            android:id="@+id/homeHeadphoneImage"
-            android:layout_width="wrap_content"
-            android:layout_height="150dp"
-            android:layout_marginTop="30dp"
-            android:contentDescription="@string/headphone_image"
-            android:scaleType="fitCenter"
-            android:src="@drawable/headphone"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/homeButtonContainer" />
-
         <LinearLayout
             android:id="@+id/constraintFooterButtonContainer"
             android:layout_width="match_parent"
@@ -85,7 +85,7 @@
             android:weightSum="1"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/homeHeadphoneImage">
+            app:layout_constraintTop_toBottomOf="@id/homeButtonContainer">
 
             <Button
                 android:id="@+id/homeFragmentButton"
