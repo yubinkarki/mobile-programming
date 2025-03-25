@@ -18,6 +18,5 @@
         android:title="@string/recycler_view_list" />
     <item
         android:id="@+id/appOptionsLogout"
-        android:title="@string/logout"
-        app:showAsAction="withText" />
+        android:title="@string/logout" />
 </menu>
