@@ -108,6 +108,16 @@ public class Signup extends AppCompatActivity {
         });
     }
 
+   /* @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if (requestCode == contactCode && resultCode == RESULT_OK) {
+            String message = data.getStringExtra("contactData");
+            headingText.setText(message);
+        }
+    } */
+
     @Override
     protected void onResume() {
         super.onResume();
