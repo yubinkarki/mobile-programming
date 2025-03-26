@@ -5,10 +5,9 @@ import android.os.Bundle;
 import android.view.Window;
 import android.widget.Toast;
 import android.widget.Button;
-import android.content.Intent;
+import android.widget.TextView;
 import android.widget.EditText;
 
-import androidx.activity.OnBackPressedCallback;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.bca.mobile_programming.R;
@@ -23,40 +22,21 @@ public class Contact extends AppCompatActivity {
 
         this.setFinishOnTouchOutside(false);
 
+        TextView heading = findViewById(R.id.helloHeadingText);
         Button submitButton = findViewById(R.id.helloSubmitButton);
         Button cancelButton = findViewById(R.id.helloCancelButton);
         EditText fullNameInput = findViewById(R.id.helloFullNameInput);
 
         submitButton.setOnClickListener(v -> {
             String fullNameValue = fullNameInput.getText().toString();
-
             if (fullNameValue.isEmpty()) fullNameValue = "No Value";
-
-            Intent i = new Intent();
-            i.putExtra("contactData", fullNameValue);
-            setResult(RESULT_OK, i);
-            Toast.makeText(getApplicationContext(), "Submitted", Toast.LENGTH_SHORT).show();
-            finish();
+            heading.setText(fullNameValue);
         });
 
         cancelButton.setOnClickListener(v -> {
-            Intent i = new Intent();
-            i.putExtra("contactData", "Contact Text");
-            setResult(RESULT_OK, i);
+            Toast.makeText(getApplicationContext(), "Closed", Toast.LENGTH_SHORT).show();
             finish();
         });
-
-        OnBackPressedCallback sendDataOnBack = new OnBackPressedCallback(true) {
-            @Override
-            public void handleOnBackPressed() {
-                Intent i = new Intent();
-                i.putExtra("contactData", "Back Button");
-                setResult(RESULT_OK, i);
-                finish();
-            }
-        };
-
-        getOnBackPressedDispatcher().addCallback(this, sendDataOnBack);
     }
 
     @Override
