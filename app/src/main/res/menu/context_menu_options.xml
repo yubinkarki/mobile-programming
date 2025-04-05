@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/contextMenuOptionsDelete"
+        android:title="@string/delete" />
+    <item
+        android:id="@+id/contextMenuOptionsDetails"
+        android:title="@string/details" />
+    <item
+        android:id="@+id/contextMenuOptionsShowLess"
+        android:title="@string/show_less" />
+    <item
+        android:id="@+id/contextMenuOptionsNotInterested"
+        android:title="@string/not_interested" />
+</menu>
