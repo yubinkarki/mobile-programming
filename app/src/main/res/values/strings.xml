@@ -171,12 +171,12 @@
     </string-array>
 
     <string-array name="custom_description_list">
-        <item>Seed Pokemon, starter from Kanto</item>
-        <item>Fire lizard Pokemon, starter from Kanto</item>
-        <item>Tiny Turtle Pokemon, starter from Kanto</item>
+        <item>Seed Pokemon, starter from Kanto (かんとう)</item>
+        <item>Fire lizard Pokemon, starter from Kanto (かんとう)</item>
+        <item>Tiny Turtle Pokemon, starter from Kanto (かんとう)</item>
         <item>Electric mouse Pokemon, mascot of the franchise</item>
         <item>Evolution Pokemon with many possible evolutions</item>
-        <item>Legendary Psychic Pokemon from Kanto. This is known to be one of the most powerful creature in the history.</item>
+        <item>Legendary Psychic Pokemon from Kanto (かんとう). This is known to be one of the most powerful creature in the history.</item>
         <item>Shadow Pokemon and final form of Gastly</item>
         <item>Powerful Dragon Pokemon and final form of Dratini</item>
         <item>Psychic Pokemon with high Special Attack stats</item>
