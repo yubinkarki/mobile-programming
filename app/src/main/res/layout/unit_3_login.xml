@@ -12,7 +12,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingHorizontal="30dp"
-        android:paddingVertical="60dp">
+        android:paddingTop="120dp"
+        android:paddingBottom="50dp">
 
         <ImageView
             android:id="@+id/loginUserImage"
