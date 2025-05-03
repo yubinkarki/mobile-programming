@@ -7,9 +7,8 @@ import android.app.Activity;
 import android.widget.Button;
 import android.content.Intent;
 import android.widget.TextView;
-import android.view.WindowManager;
 
-import androidx.core.content.ContextCompat;
+import androidx.core.view.WindowCompat;
 
 import com.bca.mobile_programming.R;
 import com.bca.mobile_programming.unit_4.Home;
@@ -20,11 +19,8 @@ public class Login extends Activity {
         super.onStart();
         Log.d("myStateLog", "Login - onStart");
 
-        // Setting status and navigation bar color
         Window window = getWindow();
-        window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
-        window.setNavigationBarColor(ContextCompat.getColor(this, R.color.black));
-        window.setStatusBarColor(ContextCompat.getColor(this, R.color.light_teal));
+        WindowCompat.setDecorFitsSystemWindows(window, false); // Enable edge to edge
     }
 
     @Override
