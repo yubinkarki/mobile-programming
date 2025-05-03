@@ -1,4 +1,7 @@
-//  MobileProgramming
+//
+//  main.swift
+//  mobile-programming-unit-eight
+//
 //  Created by Yubin on 14/08/2024.
 
 print("Namaste sabai jana lai 🙏🏼\n")
@@ -38,3 +41,9 @@ print("The final sum is >>", sumResult)
 for number in 1 ... 5 {
     print("Range operator >>", number)
 }
+
+func greatestOfThree(a: Int, b: Int, c: Int) -> Int {
+    return (a >= b && a >= c) ? a : (b >= c ? b : c)
+}
+
+print("\nThe greatest number is", greatestOfThree(a: 10, b: 20, c: 30))
