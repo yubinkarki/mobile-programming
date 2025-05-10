@@ -1,13 +1,13 @@
 [versions]
-agp = "8.9.1"
+agp = "8.10.0"
 junit = "4.13.2"
 volley = "1.2.1"
 appcompat = "1.7.0"
 material = "1.12.0"
-googleMaps = "19.1.0"
+googleMaps = "19.2.0"
 junitVersion = "1.2.1"
 espressoCore = "3.6.1"
-splashScreen = "1.2.0-beta01"
+splashScreen = "1.2.0-beta02"
 
 [libraries]
 junit = { group = "junit", name = "junit", version.ref = "junit" }
