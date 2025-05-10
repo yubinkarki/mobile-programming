@@ -50,16 +50,11 @@ public class Home extends AppCompatActivity {
     protected void onStart() {
         super.onStart();
 
-        // Setting color of status bar
-        Window window = getWindow();
-        window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
-        window.setStatusBarColor(ContextCompat.getColor(this, R.color.lighter_blue));
-
         ActionBar bar = getSupportActionBar();
 
         // Changing action bar properties
         if (bar != null) {
-            int color = ContextCompat.getColor(this, R.color.lighter_blue);
+            int color = ContextCompat.getColor(this, R.color.light_teal);
             int textColor = ContextCompat.getColor(this, R.color.dark_gray);
             Spannable text = new SpannableString(getResources().getString(R.string.home));
 
@@ -68,7 +63,7 @@ public class Home extends AppCompatActivity {
             text.setSpan(new LeadingMarginSpan.Standard(20), 0, text.length(), Spannable.SPAN_INCLUSIVE_INCLUSIVE);
 
             bar.setTitle(text);
-            bar.setElevation(10);
+            bar.setElevation(20);
             bar.setBackgroundDrawable(new ColorDrawable(color));
         }
     }
