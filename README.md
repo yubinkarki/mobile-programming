@@ -1,7 +1,7 @@
 ## [Mobile Programming](https://yubinkarki.notion.site/Mobile-Programming-4a78b1019b5a427cacc09e9ad90e94ca)
 
-Hands on with Android Studio for native Android app development
-Each unit is separated in their respective directory
+Hands on with Android Studio for native Android app development  
+Each unit is separated in their respective directory  
 Part of the **Mobile Programming** course for BCA 6th semester
 
 ## Table of Contents
