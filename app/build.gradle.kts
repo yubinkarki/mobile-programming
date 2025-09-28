@@ -4,7 +4,7 @@ plugins {
 
 android {
     namespace = "com.bca.mobile_programming"
-    compileSdk = 35
+    compileSdk = 36
 
     defaultConfig {
         applicationId = "com.bca.mobile_programming"
